@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating the Unity3D Project &mdash; Alexa Plus Unity August 2018 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating the Alexa Skill" href="LC-Part-2.html" />
+    <link rel="prev" title="Introduction" href="LC-Introduction.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Alexa Plus Unity
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">GETTING STARTED</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GS-Part-1.html">Setup for Unity3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GS-Part-2.html">Setup for Alexa Skills</a></li>
+</ul>
+<p class="caption"><span class="caption-text">TUTORIAL (LIGHT CONTROL)</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="LC-Introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating the Unity3D Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#obtain-an-identity-pool-id-using-amazon-cognito">Obtain an Identity Pool ID using Amazon Cognito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attach-polices-to-the-identity-pool-default-roles-in-aws-iam">Attach Polices to the Identity Pool default roles in AWS IAM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-project">Creating the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integrating-the-alexa-plus-unity-package">Integrating the Alexa Plus Unity Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-the-lightcontrol-script-into-the-unity3d-project">Adding the LightControl script into the Unity3D project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-the-alexa-manager-gameobject-in-unity3d">Adding the Alexa Manager GameObject in Unity3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wrapping-up">Wrapping Up</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LC-Part-2.html">Creating the Alexa Skill</a></li>
+</ul>
+<p class="caption"><span class="caption-text">DOCUMENTATION</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TD-Unity3D.html">Unity3D C# Technical Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TD-NodeJS.html">Node.JS Technical Docs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Alexa Plus Unity</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Creating the Unity3D Project</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/LC-Part-1.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-the-unity3d-project">
+<h1>Creating the Unity3D Project<a class="headerlink" href="#creating-the-unity3d-project" title="Permalink to this headline">¶</a></h1>
+<p>Let’s setup the Unity Project!</p>
+<p>If you get lost or want to see the final project, the light control demo scene is located in <code class="docutils literal notranslate"><span class="pre">Amazon</span> <span class="pre">Alexa\Examples</span></code>. You will need to create a project and import <code class="docutils literal notranslate"><span class="pre">AlexaPlusUnity.unitypackage</span></code> to gain access to this folder.</p>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://unity3d.com/">Unity3D</a> version 4.x or above.</li>
+<li>An <a class="reference external" href="https://aws.amazon.com/">AWS Account</a></li>
+</ul>
+</div>
+<div class="section" id="obtain-an-identity-pool-id-using-amazon-cognito">
+<h2>Obtain an Identity Pool ID using Amazon Cognito<a class="headerlink" href="#obtain-an-identity-pool-id-using-amazon-cognito" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Log in to the <a class="reference external" href="https://console.aws.amazon.com/cognito/home">Amazon Cognito Console</a> and click <strong>Create new identity pool</strong>.</li>
+<li>Enter a name for your Identity Pool and check the checkbox to enable access to unauthenticated identities. Click <strong>Create Pool</strong> to create your identity pool.</li>
+<li>Click <strong>Allow</strong> to create the two default roles associated with your identity pool–one for unauthenticated users and one for authenticated users. These default roles provide your identity pool access to Cognito Sync and Mobile Analytics.</li>
+</ol>
+<p>The next page displays code. Take note of the displayed <strong>Identity Pool ID</strong> and the <strong>Region</strong> you set up the Identity Pool in as you will need them when setting up Alexa Plus Unity.</p>
+</div>
+<div class="section" id="attach-polices-to-the-identity-pool-default-roles-in-aws-iam">
+<h2>Attach Polices to the Identity Pool default roles in AWS IAM<a class="headerlink" href="#attach-polices-to-the-identity-pool-default-roles-in-aws-iam" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Log in to the <a class="reference external" href="https://console.aws.amazon.com/iam/home?region=us-east-1#/home">AWS IAM Console</a> and click <strong>Roles</strong> in the left navigation bar.</li>
+<li>Find and click your <strong>Unauthenticated</strong> Identity Pool role. It should look similar to <code class="docutils literal notranslate"><span class="pre">Cognito_[YOUR</span> <span class="pre">IDENTITY</span> <span class="pre">POOL]Unauth_Role</span></code>.</li>
+<li>Click <strong>Attach Policies</strong>.</li>
+<li>Find and check the <strong>AmazonSQSFullAccess</strong> and <strong>AmazonDynamoDBFullAccess</strong> polices.</li>
+<li>Click <strong>Attach Policy</strong>.</li>
+</ol>
+<p>Your Identity Pool is now configured to use the required AWS services for Alexa Plus Unity to function.</p>
+</div>
+<div class="section" id="creating-the-project">
+<h2>Creating the project<a class="headerlink" href="#creating-the-project" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Open Unity3D.</li>
+<li>Create a new 3D project.</li>
+<li>Add a cube to the SampleScene (<code class="docutils literal notranslate"><span class="pre">GameObject</span> <span class="pre">-&gt;</span> <span class="pre">3D</span> <span class="pre">Object</span> <span class="pre">-&gt;</span> <span class="pre">Cube</span></code>).</li>
+</ol>
+</div>
+<div class="section" id="integrating-the-alexa-plus-unity-package">
+<h2>Integrating the Alexa Plus Unity Package<a class="headerlink" href="#integrating-the-alexa-plus-unity-package" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Download the <code class="docutils literal notranslate"><span class="pre">AlexaPlusUnity.unitypackage</span></code> from the <a class="reference external" href="https://github.com/AustinMathuw/AlexaPlusUnity/releases">Releases</a> tab in the GitHub project.</li>
+<li>With your project <strong>open</strong>, double click the package file you just downloaded.</li>
+<li>Make sure everything is checked and click <strong>Import</strong>.</li>
+</ol>
+<p>You should now see two new folders in you Assets folder, <strong>Amazon Alexa</strong> and <strong>Plugins</strong>.</p>
+</div>
+<div class="section" id="adding-the-lightcontrol-script-into-the-unity3d-project">
+<h2>Adding the LightControl script into the Unity3D project<a class="headerlink" href="#adding-the-lightcontrol-script-into-the-unity3d-project" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">With your project <strong>open</strong>, create a new script (<code class="docutils literal notranslate"><span class="pre">Assets</span> <span class="pre">-&gt;</span> <span class="pre">Create</span> <span class="pre">-&gt;</span> <span class="pre">C#</span> <span class="pre">Script</span></code>) and name it <strong>LightControl</strong>.</p>
+</li>
+<li><p class="first">Open your LightControl script by double-clicking it.</p>
+</li>
+<li><p class="first">Deleate everything in the script.</p>
+</li>
+<li><p class="first">Copy and paste the code below into your LightControl script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">Amazon</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">Amazon</span><span class="o">.</span><span class="n">DynamoDBv2</span><span class="o">.</span><span class="n">Model</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">AmazonsAlexa</span><span class="o">.</span><span class="n">Unity</span><span class="o">.</span><span class="n">AlexaCommunicationModule</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">System</span><span class="o">.</span><span class="n">Collections</span><span class="o">.</span><span class="n">Generic</span><span class="p">;</span>
+<span class="n">using</span> <span class="n">UnityEngine</span><span class="p">;</span>
+
+<span class="n">public</span> <span class="k">class</span> <span class="nc">LightControl</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+    <span class="o">//</span><span class="n">Step</span> <span class="mi">5</span><span class="p">:</span> <span class="n">Add</span> <span class="n">variables</span> <span class="n">below</span>
+
+
+    <span class="o">//</span> <span class="n">Use</span> <span class="n">this</span> <span class="k">for</span> <span class="n">initialization</span>
+    <span class="n">void</span> <span class="n">Start</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">6</span><span class="p">:</span> <span class="n">Add</span> <span class="n">AlexaPlusUnity</span> <span class="n">initialization</span>
+
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">void</span> <span class="n">ConfirmSetup</span><span class="p">(</span><span class="n">GetSessionAttributesEventData</span> <span class="n">eventData</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">7</span><span class="p">:</span> <span class="n">Notify</span> <span class="n">the</span> <span class="n">skill</span> <span class="n">that</span> <span class="n">setup</span> <span class="n">has</span> <span class="n">completed</span> <span class="n">by</span> <span class="n">updating</span> <span class="n">the</span> <span class="n">skills</span> <span class="n">persistant</span> <span class="n">attributes</span> <span class="p">(</span><span class="ow">in</span> <span class="n">DynamoDB</span><span class="p">)</span>
+
+    <span class="p">}</span>
+
+    <span class="n">void</span> <span class="n">Update</span><span class="p">()</span> <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">8</span><span class="p">:</span> <span class="n">Add</span> <span class="n">Keyboard</span> <span class="n">event</span> <span class="n">listener</span> <span class="p">(</span><span class="n">For</span> <span class="s2">&quot;gameplay&quot;</span><span class="p">)</span>
+
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">void</span> <span class="n">HandleSpacePress</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">9</span><span class="p">:</span> <span class="n">Handle</span> <span class="n">the</span> <span class="n">keyboard</span> <span class="nb">input</span>
+
+    <span class="p">}</span>
+
+    <span class="o">//</span><span class="n">Callback</span> <span class="k">for</span> <span class="n">when</span> <span class="n">a</span> <span class="n">message</span> <span class="ow">is</span> <span class="n">recieved</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">OnAlexaMessage</span><span class="p">(</span><span class="n">HandleMessageEventData</span> <span class="n">eventData</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">10</span><span class="p">:</span> <span class="n">Listen</span> <span class="k">for</span> <span class="n">new</span> <span class="n">messages</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">Alexa</span> <span class="n">skill</span>
+
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">void</span> <span class="n">UpdateLight</span><span class="p">(</span><span class="n">string</span> <span class="nb">type</span><span class="p">,</span> <span class="n">string</span> <span class="n">value</span><span class="p">,</span> <span class="n">GetSessionAttributesEventData</span> <span class="n">eventData</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">11</span><span class="p">:</span> <span class="n">Update</span> <span class="n">the</span> <span class="n">light</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">incoming</span> <span class="n">message</span><span class="p">,</span> <span class="n">then</span> <span class="n">save</span> <span class="n">the</span> <span class="n">state</span> <span class="n">of</span> <span class="n">the</span> <span class="n">light</span> <span class="n">through</span> <span class="n">the</span> <span class="n">skill</span><span class="s1">&#39;s session attributes</span>
+
+    <span class="p">}</span>
+
+    <span class="n">public</span> <span class="n">void</span> <span class="n">SetAttributesCallback</span><span class="p">(</span><span class="n">SetSessionAttributesEventData</span> <span class="n">eventData</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">12</span><span class="p">:</span> <span class="n">Callback</span> <span class="k">for</span> <span class="n">when</span> <span class="n">session</span> <span class="n">attributes</span> <span class="n">have</span> <span class="n">been</span> <span class="n">updated</span>
+
+    <span class="p">}</span>
+
+
+    <span class="n">public</span> <span class="n">void</span> <span class="n">OnMessageDeleted</span><span class="p">(</span><span class="n">ErrorEventData</span> <span class="n">eventData</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">//</span><span class="n">Step</span> <span class="mi">13</span><span class="p">:</span> <span class="n">Callback</span> <span class="k">for</span> <span class="n">when</span> <span class="n">a</span> <span class="n">message</span> <span class="ow">is</span> <span class="n">deleted</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>The above code is our skeleton for our script. We will fill this skeleton step by step. The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the skeleton.
+<strong>Note</strong>: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.</p>
+<ol class="arabic" start="5">
+<li><p class="first">Define the class variables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="n">string</span> <span class="n">sqsQueue</span><span class="p">;</span>
+<span class="n">public</span> <span class="n">string</span> <span class="n">identityPoolId</span><span class="p">;</span>
+<span class="n">public</span> <span class="n">string</span> <span class="n">AWSRegion</span> <span class="o">=</span> <span class="n">RegionEndpoint</span><span class="o">.</span><span class="n">USEast1</span><span class="o">.</span><span class="n">SystemName</span><span class="p">;</span>
+<span class="n">public</span> <span class="n">string</span> <span class="n">tableName</span><span class="p">;</span>
+<span class="n">public</span> <span class="n">GameObject</span> <span class="n">lightCube</span><span class="p">;</span>
+<span class="n">private</span> <span class="n">Dictionary</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="n">AttributeValue</span><span class="o">&gt;</span> <span class="n">attributes</span><span class="p">;</span>
+<span class="n">private</span> <span class="n">AmazonAlexaManager</span> <span class="n">alexaManager</span><span class="p">;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>These variables are necessary to preform initialization and enable reusablity of the Alexa Manager within our LightControl script.</p>
+<ol class="arabic" start="6">
+<li><p class="first">Find and initialize the Alexa Manager:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alexaManager</span> <span class="o">=</span> <span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">AmazonAlexaManager</span><span class="o">&gt;</span><span class="p">();</span> <span class="o">//</span><span class="n">Get</span> <span class="n">the</span> <span class="n">manager</span> <span class="n">script</span>
+<span class="n">StartCoroutine</span><span class="p">(</span><span class="n">alexaManager</span><span class="o">.</span><span class="n">StartAlexa</span><span class="p">(</span><span class="n">sqsQueue</span><span class="p">,</span> <span class="n">tableName</span><span class="p">,</span> <span class="n">identityPoolId</span><span class="p">,</span> <span class="n">AWSRegion</span><span class="p">,</span> <span class="n">OnAlexaMessage</span><span class="p">));</span> <span class="o">//</span><span class="n">Initialize</span> <span class="n">the</span> <span class="n">Alexa</span> <span class="n">Manager</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Tell the skill that the game has completed setup and is ready to play:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">attributes</span> <span class="o">=</span> <span class="n">eventData</span><span class="o">.</span><span class="n">Values</span><span class="p">;</span>
+<span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;SETUP_STATE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span> <span class="n">AttributeValue</span> <span class="p">{</span> <span class="n">S</span> <span class="o">=</span> <span class="s2">&quot;COMPLETED&quot;</span> <span class="p">};</span> <span class="o">//</span><span class="n">Set</span> <span class="n">SETUP_STATE</span> <span class="n">attribute</span> <span class="n">to</span> <span class="n">a</span> <span class="n">string</span><span class="p">,</span> <span class="n">COMPLETED</span>
+<span class="n">alexaManager</span><span class="o">.</span><span class="n">SetSessionAttributes</span><span class="p">(</span><span class="n">attributes</span><span class="p">,</span> <span class="n">SetAttributesCallback</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Listen for a spacebar keypress:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">Input</span><span class="o">.</span><span class="n">GetKeyDown</span><span class="p">(</span><span class="n">KeyCode</span><span class="o">.</span><span class="n">Space</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;Space pressed&quot;</span><span class="p">);</span>
+    <span class="n">HandleSpacePress</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update the light to blue when the spacebar is pressed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if (!PlayerPrefs.HasKey(&quot;AlexaUserId&quot;)) //If the AlexaUserId has not been recieved from Alexa (If the user has not opened the skill)
+    Debug.LogError(&quot;&#39;AlexaUserId&#39; not found in PlayerPrefs. We must establish connection from Alexa to set this. Please open the skill to set the &#39;AlexaUserId&#39; PlayerPref.&quot;);
+
+alexaManager.GetSessionAttributes((result) =&gt;
+{
+    if (result.IsError)
+        Debug.LogError(result.Exception.Message);
+    UpdateLight(&quot;Color&quot;, &quot;blue&quot;, result);
+});
+</pre></div>
+</div>
+</li>
+<li><p class="first">Listen for new messages from the Alexa skill:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;OnAlexaMessage&quot;</span><span class="p">);</span>
+
+<span class="n">AlexaIncomingMessage</span> <span class="n">messageBody</span> <span class="o">=</span> <span class="n">JsonUtility</span><span class="o">.</span><span class="n">FromJson</span><span class="o">&lt;</span><span class="n">AlexaIncomingMessage</span><span class="o">&gt;</span><span class="p">(</span><span class="n">eventData</span><span class="o">.</span><span class="n">Message</span><span class="o">.</span><span class="n">Body</span><span class="p">);</span>
+
+<span class="o">//</span><span class="n">Get</span> <span class="n">Session</span> <span class="n">Attributes</span> <span class="k">with</span> <span class="ow">in</span><span class="o">-</span><span class="n">line</span> <span class="n">defined</span> <span class="n">callback</span>
+<span class="n">alexaManager</span><span class="o">.</span><span class="n">GetSessionAttributes</span><span class="p">((</span><span class="n">result</span><span class="p">)</span> <span class="o">=&gt;</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">IsError</span><span class="p">)</span>
+        <span class="n">Debug</span><span class="o">.</span><span class="n">LogError</span><span class="p">(</span><span class="n">eventData</span><span class="o">.</span><span class="n">Exception</span><span class="o">.</span><span class="n">Message</span><span class="p">);</span>
+
+    <span class="n">switch</span> <span class="p">(</span><span class="n">messageBody</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">case</span> <span class="s2">&quot;AlexaUserId&quot;</span><span class="p">:</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;AlexaUserId: &quot;</span> <span class="o">+</span> <span class="n">messageBody</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
+            <span class="n">ConfirmSetup</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+            <span class="n">goto</span> <span class="n">case</span> <span class="s2">&quot;delete&quot;</span><span class="p">;</span>
+        <span class="n">case</span> <span class="s2">&quot;Color&quot;</span><span class="p">:</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;Requested Light Color: &quot;</span> <span class="o">+</span> <span class="n">messageBody</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
+            <span class="n">UpdateLight</span><span class="p">(</span><span class="n">messageBody</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">messageBody</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+            <span class="n">goto</span> <span class="n">case</span> <span class="s2">&quot;delete&quot;</span><span class="p">;</span>
+        <span class="n">case</span> <span class="s2">&quot;State&quot;</span><span class="p">:</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;Requested Light State: &quot;</span> <span class="o">+</span> <span class="n">messageBody</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
+            <span class="n">UpdateLight</span><span class="p">(</span><span class="n">messageBody</span><span class="o">.</span><span class="n">type</span><span class="p">,</span> <span class="n">messageBody</span><span class="o">.</span><span class="n">message</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+            <span class="n">goto</span> <span class="n">case</span> <span class="s2">&quot;delete&quot;</span><span class="p">;</span>
+        <span class="n">case</span> <span class="s2">&quot;delete&quot;</span><span class="p">:</span>
+            <span class="n">var</span> <span class="n">receiptHandle</span> <span class="o">=</span> <span class="n">eventData</span><span class="o">.</span><span class="n">Message</span><span class="o">.</span><span class="n">ReceiptHandle</span><span class="p">;</span>
+            <span class="n">alexaManager</span><span class="o">.</span><span class="n">DeleteMessage</span><span class="p">(</span><span class="n">receiptHandle</span><span class="p">,</span> <span class="n">OnMessageDeleted</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="n">default</span><span class="p">:</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Update the light:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">attributes</span> <span class="o">=</span> <span class="n">eventData</span><span class="o">.</span><span class="n">Values</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;Color&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span> <span class="n">AttributeValue</span> <span class="p">{</span> <span class="n">S</span> <span class="o">=</span> <span class="n">value</span> <span class="p">};</span> <span class="o">//</span><span class="n">Set</span> <span class="n">color</span> <span class="n">attribute</span> <span class="n">to</span> <span class="n">a</span> <span class="n">string</span> <span class="n">value</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;State&quot;</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">attributes</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new</span> <span class="n">AttributeValue</span> <span class="p">{</span> <span class="n">S</span> <span class="o">=</span> <span class="n">value</span> <span class="p">};</span> <span class="o">//</span><span class="n">Set</span> <span class="n">state</span> <span class="n">attribute</span> <span class="n">to</span> <span class="n">a</span> <span class="n">string</span> <span class="n">value</span>
+<span class="p">}</span>
+
+<span class="n">switch</span> <span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">case</span> <span class="s2">&quot;white&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">white</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">case</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">red</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">case</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">green</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">case</span> <span class="s2">&quot;yellow&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">yellow</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">case</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">material</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">Color</span><span class="o">.</span><span class="n">blue</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">case</span> <span class="s2">&quot;on&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="n">case</span> <span class="s2">&quot;off&quot;</span><span class="p">:</span>
+        <span class="n">lightCube</span><span class="o">.</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">Renderer</span><span class="o">&gt;</span><span class="p">()</span><span class="o">.</span><span class="n">enabled</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">alexaManager</span><span class="o">.</span><span class="n">SetSessionAttributes</span><span class="p">(</span><span class="n">attributes</span><span class="p">,</span> <span class="n">SetAttributesCallback</span><span class="p">);</span>  <span class="o">//</span><span class="n">Save</span> <span class="n">Attributes</span> <span class="k">for</span> <span class="n">Alexa</span> <span class="n">to</span> <span class="n">use</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Let’s be notified when there is a error setting the attributes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;OnSetAttributes&quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">eventData</span><span class="o">.</span><span class="n">IsError</span><span class="p">)</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">LogError</span><span class="p">(</span><span class="n">eventData</span><span class="o">.</span><span class="n">Exception</span><span class="o">.</span><span class="n">Message</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Let’s be notified when there is a error deleting a message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Debug</span><span class="o">.</span><span class="n">Log</span><span class="p">(</span><span class="s2">&quot;OnDeleteMessage&quot;</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">eventData</span><span class="o">.</span><span class="n">IsError</span><span class="p">)</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">LogError</span><span class="p">(</span><span class="n">eventData</span><span class="o">.</span><span class="n">Exception</span><span class="o">.</span><span class="n">Message</span><span class="p">);</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Be sure to save this file!</p>
+</li>
+</ol>
+</div>
+<div class="section" id="adding-the-alexa-manager-gameobject-in-unity3d">
+<h2>Adding the Alexa Manager GameObject in Unity3D<a class="headerlink" href="#adding-the-alexa-manager-gameobject-in-unity3d" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a new <strong>Empty GameObject</strong> (<code class="docutils literal notranslate"><span class="pre">GameObject</span> <span class="pre">-&gt;</span> <span class="pre">Create</span> <span class="pre">Empty</span></code>) and name it <strong>Amazon Alexa</strong>.</li>
+<li>With your new GameObject selected, click <strong>Add Component</strong>, type <strong>AlexaAlexaManager</strong> and select the AlexaAlexaManager script.</li>
+<li>Click <strong>Add Component</strong> again, type <strong>LightControl</strong> and select the LightControl script.</li>
+<li>Fill the <code class="docutils literal notranslate"><span class="pre">SQS</span> <span class="pre">Queue</span></code> with the code sent from the Alexa skill when it launches.</li>
+</ol>
+<p><strong>Note</strong>: You will have to fill this in later, as we have not set up the Alexa skill yet.</p>
+<ol class="arabic simple" start="5">
+<li>Fill the <code class="docutils literal notranslate"><span class="pre">Identity</span> <span class="pre">Pool</span> <span class="pre">Id</span></code> with the one you created earlier.</li>
+<li>Fill the <code class="docutils literal notranslate"><span class="pre">AWS</span> <span class="pre">Region</span></code> with the one you made note of earlier.</li>
+<li>Fill the <code class="docutils literal notranslate"><span class="pre">Table</span> <span class="pre">Name</span></code> with the one your Alexa skill created.</li>
+</ol>
+<p><strong>Note</strong>: You will have to fill this in later, as we have not set up the Alexa skill yet.</p>
+<ol class="arabic simple" start="8">
+<li>Drag the <strong>Cube</strong> from the hierarchy into the box next to <code class="docutils literal notranslate"><span class="pre">Light</span> <span class="pre">Cube</span></code>.</li>
+</ol>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping Up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>Aside from a few minor updates, have finished the Unity3D project! Next Step: The Alexa Skill!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LC-Part-2.html" class="btn btn-neutral float-right" title="Creating the Alexa Skill" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="LC-Introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Austin Wilson.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'August 2018',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
