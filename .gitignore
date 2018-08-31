@@ -1,0 +1,5 @@
+#Mac .ds_store
+.DS_Store
+
+#Exclude the 
+_build/

@@ -19,6 +19,8 @@ Creating the skill
 
 1. Clone the templete:
 
+
+
 Adding AlexaPlusUnity to the skill
 ==================================
 
