@@ -4,7 +4,7 @@ Creating the Alexa Skill
 
 Let's setup the Alexa Plus Unity SDK!
 
-If you get lost, stuck, or just want a working demo right now, you can clone the complete sample project from `here <https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillComplete.git>_`.
+If you get lost, stuck, or just want a working demo right now, you can clone the complete sample project from `here <https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillComplete.git>`_.
 
 Prerequisites
 =============
