@@ -22,11 +22,11 @@ Creating the skill
 Adding AlexaPlusUnity to the skill
 ==================================
 
-1. ::
+1. Lorem Ipsolm ::
 
         var alexaGaming = require('./alexa-gaming-cookbook.js');
 
-2. ::
+2. Lorem Ipsolm ::
 
         if(attributes.SETUP_STATE == "STARTED") {
             var launchSetUpResult = await launchSetUp(speechText, reprompt, handlerInput, attributes);
@@ -34,14 +34,14 @@ Adding AlexaPlusUnity to the skill
             response = launchSetUpResult.response;
         }
 
-3 ::
+3. Lorem Ipsolm ::
 
         var payloadObj = { 
             type: "State",
             message: state
         };
 
-4 ::
+4. Lorem Ipsolm ::
 
         var response = await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
             return handlerInput.responseBuilder
@@ -52,14 +52,14 @@ Adding AlexaPlusUnity to the skill
             return ErrorHandler.handle(handlerInput, err);
         });
 
-5 ::
+5. Lorem Ipsolm ::
 
         var payloadObj = { 
             type: "Color",
             message: color
         };
 
-6 ::
+6. Lorem Ipsolm ::
 
         var response = await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
             return handlerInput.responseBuilder
@@ -70,7 +70,7 @@ Adding AlexaPlusUnity to the skill
             return ErrorHandler.handle(handlerInput, err);
         });
 
-7 ::
+7. Lorem Ipsolm ::
 
         var response = await alexaGaming.createQueue(attributes.SQS_QUEUE).then(async (data) => {
             attributes.SQS_QUEUE_URL = data.QueueUrl.toString();
@@ -88,14 +88,14 @@ Adding AlexaPlusUnity to the skill
             }
         );
 
-8 ::
+8. Lorem Ipsolm ::
 
         var payloadObj = { 
             type: "AlexaUserId",
             message: userId
         };
 
-9 ::
+9. Lorem Ipsolm ::
 
         return await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
             return response;
@@ -103,7 +103,7 @@ Adding AlexaPlusUnity to the skill
             return ErrorHandler.handle(handlerInput, err);
         });
 
-10 ::
+10. Lorem Ipsolm ::
 
         attributes.SETUP_STATE = "STARTED";
         attributes.SQS_QUEUE = await alexaGaming.uniqueQueueGenerator();
