@@ -2,7 +2,7 @@
 Creating the Alexa Skill
 ************************
 
-Let's setup the Alexa Plus Unity SDK!
+Let's setup the Alexa Skill!
 
 If you get lost, stuck, or just want a working demo right now, you can clone the complete sample project from `here <https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillComplete.git>`_.
 
@@ -17,8 +17,36 @@ Prerequisites
 Creating the skill
 ==================
 
-1. Clone the templete:
+1. Clone the example skill templete:
 
+Example Skill Template Overview
+===============================
+
+Our Example Skill has the following Intents:
+
+* FlipSwitchIntent
+
+    * Handles turning our light on and off
+
+* ChangeColorIntent
+
+    * Handles changing the color of our light
+
+* GetColorIntent
+
+    * Returns our lights current color
+
+* AMAZON.HelpIntent
+
+    * Returns help message to guide the user
+
+* AMAZON.CancelIntent
+
+    * Closes the skill
+
+* AMAZON.StopIntent
+
+    * Closes the skill
 
 
 Adding AlexaPlusUnity to the skill
@@ -31,13 +59,15 @@ The steps below corrospond to the step numbers in the skeleton. Place the code f
 
         var alexaGaming = require('./alexa-gaming-cookbook.js');
 
-2. Lorem Ipsolm ::
+2. In our example skill, we will use state management to confirm that the user has connected to our game. Insert the code below inside of the LaunchRequestHandler: ::
 
         if(attributes.SETUP_STATE == "STARTED") {
             var launchSetUpResult = await launchSetUp(speechText, reprompt, handlerInput, attributes);
             attributes = launchSetUpResult.attributes;
             response = launchSetUpResult.response;
         }
+
+In the code block above, we are checking to see if we are still in the ``SETUP_STATE``. If we are, then run the method ``launchSetUp()`` and build our response. If we are not in the ``SETUP_STATE``, then use the response we already built.
 
 3. Lorem Ipsolm ::
 
