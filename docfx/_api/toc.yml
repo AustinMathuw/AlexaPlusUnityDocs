@@ -1,0 +1,20 @@
+### YamlMime:TableOfContent
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AmazonsAlexa.Unity.AlexaCommunicationModule
+  items:
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+    name: AlexaBaseData
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AmazonAlexaManager
+    name: AmazonAlexaManager
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+    name: ConnectionStatusEventData
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ErrorEventData
+    name: ErrorEventData
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.GetSessionAttributesEventData
+    name: GetSessionAttributesEventData
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+    name: HandleMessageEventData
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.MessageSentEventData
+    name: MessageSentEventData
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.SetSessionAttributesEventData
+    name: SetSessionAttributesEventData

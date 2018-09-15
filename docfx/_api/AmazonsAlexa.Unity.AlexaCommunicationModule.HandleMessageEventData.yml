@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  id: HandleMessageEventData
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule
+  children:
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.#ctor(EventSystem)
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize(System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object},System.Exception)
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message
+  langs:
+  - csharp
+  - vb
+  name: HandleMessageEventData
+  nameWithType: HandleMessageEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  type: Class
+  source:
+    id: HandleMessageEventData
+    path: ''
+    startLine: 493
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: 'public class HandleMessageEventData : AlexaBaseData'
+    content.vb: >-
+      Public Class HandleMessageEventData
+          Inherits AlexaBaseData
+  inheritance:
+  - System.Object
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  inheritedMembers:
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message
+  commentId: P:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message
+  id: Message
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: HandleMessageEventData.Message
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message
+  type: Property
+  source:
+    id: Message
+    path: ''
+    startLine: 495
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: public Dictionary<string, object> Message { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: Public ReadOnly Property Message As Dictionary(Of String, Object)
+  overload: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.#ctor(EventSystem)
+  commentId: M:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.#ctor(EventSystem)
+  id: '#ctor(EventSystem)'
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  langs:
+  - csharp
+  - vb
+  name: HandleMessageEventData(EventSystem)
+  nameWithType: HandleMessageEventData.HandleMessageEventData(EventSystem)
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.HandleMessageEventData(EventSystem)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 497
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: public HandleMessageEventData(EventSystem eventSystem)
+    parameters:
+    - id: eventSystem
+      type: EventSystem
+    content.vb: Public Sub New(eventSystem As EventSystem)
+  overload: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize(System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object},System.Exception)
+  commentId: M:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize(System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object},System.Exception)
+  id: Initialize(System.Boolean,System.Collections.Generic.Dictionary{System.String,System.Object},System.Exception)
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Boolean, Dictionary<String, Object>, Exception)
+  nameWithType: HandleMessageEventData.Initialize(Boolean, Dictionary<String, Object>, Exception)
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize(System.Boolean, System.Collections.Generic.Dictionary<System.String, System.Object>, System.Exception)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 501
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: public void Initialize(bool isError, Dictionary<string, object> message, Exception exception = null)
+    parameters:
+    - id: isError
+      type: System.Boolean
+    - id: message
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    - id: exception
+      type: System.Exception
+    content.vb: Public Sub Initialize(isError As Boolean, message As Dictionary(Of String, Object), exception As Exception = Nothing)
+  overload: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize*
+  nameWithType.vb: HandleMessageEventData.Initialize(Boolean, Dictionary(Of String, Object), Exception)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize(System.Boolean, System.Collections.Generic.Dictionary(Of System.String, System.Object), System.Exception)
+  name.vb: Initialize(Boolean, Dictionary(Of String, Object), Exception)
+references:
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule
+  commentId: N:AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AmazonsAlexa.Unity.AlexaCommunicationModule
+  nameWithType: AmazonsAlexa.Unity.AlexaCommunicationModule
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AlexaBaseData
+  nameWithType: AlexaBaseData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+  commentId: P:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  name: IsError
+  nameWithType: AlexaBaseData.IsError
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+  commentId: P:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  name: Exception
+  nameWithType: AlexaBaseData.Exception
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+  commentId: M:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  isExternal: true
+  name: BaseInitialize(Boolean, Exception)
+  nameWithType: AlexaBaseData.BaseInitialize(Boolean, Exception)
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean, System.Exception)
+  spec.csharp:
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+    name: BaseInitialize
+    nameWithType: AlexaBaseData.BaseInitialize
+    fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+    name: BaseInitialize
+    nameWithType: AlexaBaseData.BaseInitialize
+    fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message*
+  commentId: Overload:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message
+  name: Message
+  nameWithType: HandleMessageEventData.Message
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Message
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, Object>
+  nameWithType: Dictionary<String, Object>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.#ctor*
+  commentId: Overload:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.#ctor
+  name: HandleMessageEventData
+  nameWithType: HandleMessageEventData.HandleMessageEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.HandleMessageEventData
+- uid: EventSystem
+  isExternal: true
+  name: EventSystem
+  nameWithType: EventSystem
+  fullName: EventSystem
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize*
+  commentId: Overload:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize
+  name: Initialize
+  nameWithType: HandleMessageEventData.Initialize
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData.Initialize
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

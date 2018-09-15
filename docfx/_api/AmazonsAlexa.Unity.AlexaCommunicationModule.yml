@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule
+  commentId: N:AmazonsAlexa.Unity.AlexaCommunicationModule
+  id: AmazonsAlexa.Unity.AlexaCommunicationModule
+  children:
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AmazonAlexaManager
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.ErrorEventData
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.GetSessionAttributesEventData
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.MessageSentEventData
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.SetSessionAttributesEventData
+  langs:
+  - csharp
+  - vb
+  name: AmazonsAlexa.Unity.AlexaCommunicationModule
+  nameWithType: AmazonsAlexa.Unity.AlexaCommunicationModule
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AmazonAlexaManager
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.AmazonAlexaManager
+  name: AmazonAlexaManager
+  nameWithType: AmazonAlexaManager
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AmazonAlexaManager
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AlexaBaseData
+  nameWithType: AlexaBaseData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ErrorEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.ErrorEventData
+  name: ErrorEventData
+  nameWithType: ErrorEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ErrorEventData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+  name: HandleMessageEventData
+  nameWithType: HandleMessageEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.HandleMessageEventData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.MessageSentEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.MessageSentEventData
+  name: MessageSentEventData
+  nameWithType: MessageSentEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.MessageSentEventData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.GetSessionAttributesEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.GetSessionAttributesEventData
+  name: GetSessionAttributesEventData
+  nameWithType: GetSessionAttributesEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.GetSessionAttributesEventData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.SetSessionAttributesEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.SetSessionAttributesEventData
+  name: SetSessionAttributesEventData
+  nameWithType: SetSessionAttributesEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.SetSessionAttributesEventData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  name: ConnectionStatusEventData
+  nameWithType: ConnectionStatusEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule
+  commentId: N:AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AmazonsAlexa.Unity.AlexaCommunicationModule
+  nameWithType: AmazonsAlexa.Unity.AlexaCommunicationModule
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule
