@@ -1,0 +1,267 @@
+### YamlMime:ManagedReference
+items:
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  id: ConnectionStatusEventData
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule
+  children:
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.#ctor(EventSystem)
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize(System.Boolean,PNStatusCategory,System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: ConnectionStatusEventData
+  nameWithType: ConnectionStatusEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  type: Class
+  source:
+    id: ConnectionStatusEventData
+    path: ''
+    startLine: 94
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: 'public class ConnectionStatusEventData : AlexaBaseData'
+    content.vb: >-
+      Public Class ConnectionStatusEventData
+
+          Inherits AlexaBaseData
+  inheritance:
+  - System.Object
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  inheritedMembers:
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+  - AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category
+  commentId: P:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category
+  id: Category
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: ConnectionStatusEventData.Category
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category
+  type: Property
+  source:
+    id: Category
+    path: ''
+    startLine: 96
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: public PNStatusCategory Category { get; }
+    parameters: []
+    return:
+      type: PNStatusCategory
+    content.vb: Public ReadOnly Property Category As PNStatusCategory
+  overload: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.#ctor(EventSystem)
+  commentId: M:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.#ctor(EventSystem)
+  id: '#ctor(EventSystem)'
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  langs:
+  - csharp
+  - vb
+  name: ConnectionStatusEventData(EventSystem)
+  nameWithType: ConnectionStatusEventData.ConnectionStatusEventData(EventSystem)
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.ConnectionStatusEventData(EventSystem)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 98
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: public ConnectionStatusEventData(EventSystem eventSystem)
+    parameters:
+    - id: eventSystem
+      type: EventSystem
+    content.vb: Public Sub New(eventSystem As EventSystem)
+  overload: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize(System.Boolean,PNStatusCategory,System.Exception)
+  commentId: M:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize(System.Boolean,PNStatusCategory,System.Exception)
+  id: Initialize(System.Boolean,PNStatusCategory,System.Exception)
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Boolean, PNStatusCategory, Exception)
+  nameWithType: ConnectionStatusEventData.Initialize(Boolean, PNStatusCategory, Exception)
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize(System.Boolean, PNStatusCategory, System.Exception)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 102
+  assemblies:
+  - cs.temp.dll
+  namespace: AmazonsAlexa.Unity.AlexaCommunicationModule
+  syntax:
+    content: public void Initialize(bool isError, PNStatusCategory category, Exception exception = null)
+    parameters:
+    - id: isError
+      type: System.Boolean
+    - id: category
+      type: PNStatusCategory
+    - id: exception
+      type: System.Exception
+    content.vb: Public Sub Initialize(isError As Boolean, category As PNStatusCategory, exception As Exception = Nothing)
+  overload: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule
+  commentId: N:AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AmazonsAlexa.Unity.AlexaCommunicationModule
+  nameWithType: AmazonsAlexa.Unity.AlexaCommunicationModule
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  commentId: T:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule
+  name: AlexaBaseData
+  nameWithType: AlexaBaseData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+  commentId: P:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  name: IsError
+  nameWithType: AlexaBaseData.IsError
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.IsError
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+  commentId: P:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  name: Exception
+  nameWithType: AlexaBaseData.Exception
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.Exception
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+  commentId: M:AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+  parent: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData
+  isExternal: true
+  name: BaseInitialize(Boolean, Exception)
+  nameWithType: AlexaBaseData.BaseInitialize(Boolean, Exception)
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean, System.Exception)
+  spec.csharp:
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+    name: BaseInitialize
+    nameWithType: AlexaBaseData.BaseInitialize
+    fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize(System.Boolean,System.Exception)
+    name: BaseInitialize
+    nameWithType: AlexaBaseData.BaseInitialize
+    fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.AlexaBaseData.BaseInitialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category*
+  commentId: Overload:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category
+  name: Category
+  nameWithType: ConnectionStatusEventData.Category
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Category
+- uid: PNStatusCategory
+  isExternal: true
+  name: PNStatusCategory
+  nameWithType: PNStatusCategory
+  fullName: PNStatusCategory
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.#ctor*
+  commentId: Overload:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.#ctor
+  name: ConnectionStatusEventData
+  nameWithType: ConnectionStatusEventData.ConnectionStatusEventData
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.ConnectionStatusEventData
+- uid: EventSystem
+  isExternal: true
+  name: EventSystem
+  nameWithType: EventSystem
+  fullName: EventSystem
+- uid: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize*
+  commentId: Overload:AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize
+  name: Initialize
+  nameWithType: ConnectionStatusEventData.Initialize
+  fullName: AmazonsAlexa.Unity.AlexaCommunicationModule.ConnectionStatusEventData.Initialize
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
