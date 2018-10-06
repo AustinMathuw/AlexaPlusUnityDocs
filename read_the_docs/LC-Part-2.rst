@@ -17,7 +17,10 @@ Prerequisites
 Creating the skill
 ==================
 
-1. Clone the example skill templete:
+1. Clone the example skill templete: `git clone https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillTemplate.git`
+2. Open the template in a editor such as Visual Studio code
+3. Open a command prompt or terminal and navigate to <Template Location>/lambda/custom/
+4. In the command prompt or terminal, run ``npm install``
 
 Example Skill Template Overview
 ===============================
@@ -55,9 +58,11 @@ Adding AlexaPlusUnity to the skill
 The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the templete code.
 **Note**: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
 
-1. Our cloned templete already has the ``alexa-gaming-cookbook.js`` in the file hierarchy, but we still need to include it. Open ``index.js`` under ``lambda/custom/`` and add the following: ::
+1. Our cloned templete already has the ``alexaplusunity`` node module, but we still need to include it. Open ``index.js`` under ``lambda/custom/`` and add the following: ::
 
-        var alexaGaming = require('./alexa-gaming-cookbook.js');
+        var alexaPlusUnity = require('alexaplusunity');
+        alexaPlusUnity.setPubNub("<YOUR_PUB_KEY>", "<YOUR_SUB_KEY>");
+        alexaPlusUnity.setDebug(true); //True if you want detailed logs from AlexaPlusUnity
 
 2. In our example skill, we will use state management to confirm that the user has connected to our game. Insert the code below inside of the LaunchRequestHandler: ::
 
@@ -69,14 +74,14 @@ The steps below corrospond to the step numbers in the skeleton. Place the code f
 
 In the code block above, we are checking to see if we are still in the ``SETUP_STATE``. If we are, then run the method ``launchSetUp()`` and build our response. If we are not in the ``SETUP_STATE``, then use the response we already built.
 
-3. Lorem Ipsolm ::
+3. In the next steps, we will add AlexaPlusUnity to the FlipSwitchIntent (CompletetedFlipSwitchIntentHandler). We will start by creating a payload object for the intent: ::
 
         var payloadObj = { 
             type: "State",
             message: state
         };
 
-4. Lorem Ipsolm ::
+4. Then we will send a the payload to our game and reply with a success or error if the payload failed to send: ::
 
         var response = await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
             return handlerInput.responseBuilder
@@ -87,14 +92,14 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
             return ErrorHandler.handle(handlerInput, err);
         });
 
-5. Lorem Ipsolm ::
+5. Now, we will add AlexaPlusUnity to the ChangeColorIntent (CompletedChangeColorIntentHandler). We will create our payload object: ::
 
         var payloadObj = { 
             type: "Color",
             message: color
         };
 
-6. Lorem Ipsolm ::
+6. Then we will send a the payload to our game and reply with a success or error if the payload failed to send: ::
 
         var response = await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
             return handlerInput.responseBuilder
