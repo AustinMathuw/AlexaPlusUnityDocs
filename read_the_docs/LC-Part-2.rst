@@ -9,10 +9,10 @@ If you get lost, stuck, or just want a working demo right now, you can clone the
 Prerequisites
 =============
 
--  Node.js (v4.5 or above)
--  Have an `AWS Account <https://aws.amazon.com/>`_
--  Have an `Amazon Developer Account <https://developer.amazon.com/>`_
--  Install the `ASK CLI <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_
+-  Node.js (v4.5 or above).
+-  Have an `AWS Account <https://aws.amazon.com/>`_.
+-  Have an `Amazon Developer Account <https://developer.amazon.com/>`_.
+-  Install the `ASK CLI <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_.
 
 Creating the skill
 ==================
