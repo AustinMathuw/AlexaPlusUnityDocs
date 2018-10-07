@@ -7,14 +7,16 @@ Classes
 AlexaBaseData
 =============
 
-Syntax
-``public abstract class AlexaBaseData : BaseEventData``
+Syntax :: 
+
+    public abstract class AlexaBaseData : BaseEventData``
 
 Constructors
 ~~~~~~~~~~~~
 
-Declaration
-``public AlexaBaseData(EventSystem eventSystem)``
+Declaration :: 
+
+    public AlexaBaseData(EventSystem eventSystem)
 
 Parameters
 +--------------------------+--------------------------+
