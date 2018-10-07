@@ -22,6 +22,11 @@
    TD-Unity
    Node.JS SDK Technical Docs <https://www.npmjs.com/package/alexaplusunity>
 
+
+.. image:: https://s3.amazonaws.com/austinmatthuw/AlexaPlusUnity/AlexaPlusUnityFacebook.png
+  :width: 800
+  :alt: Logo
+
 ****************
 Alexa Plus Unity
 ****************
