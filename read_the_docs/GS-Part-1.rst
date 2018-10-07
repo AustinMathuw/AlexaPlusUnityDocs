@@ -8,7 +8,7 @@ Prerequisites
 =============
 
 -  `Unity <https://unity3d.com/>`_ version 4.x or above.
--  Configure AWS as explained `here <https://alexaplusunity.readthedocs.io/en/latest/AWS-SetUp.html>`_.
+-  Configure AWS and PubNub as explained `here <https://alexaplusunity.readthedocs.io/en/latest/GS-Configuration.html>`_.
 
 Integrating the Alexa Plus Unity SDK into your Unity project
 ============================================================

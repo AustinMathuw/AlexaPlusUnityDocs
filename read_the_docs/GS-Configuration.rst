@@ -10,7 +10,7 @@ For Alexa Plus Unity to fuction, we need to configure AWS to allow the Unity pro
 Prerequisites
 ^^^^^^^^^^^^^
 
--  An `AWS Account <https://aws.amazon.com/>`_
+-  An `AWS Account <https://aws.amazon.com/>`_.
 
 Obtain an Identity Pool ID using Amazon Cognito
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -40,7 +40,7 @@ For Alexa Plus Unity to fuction, we need to configure PubNub to allow the Unity 
 Prerequisites
 ^^^^^^^^^^^^^
 
--  A `PubNub Account <https://www.pubnub.com/>`_
+-  A `PubNub Account <https://www.pubnub.com/>`_.
 
 Create a New App on PubNub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
