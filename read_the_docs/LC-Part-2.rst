@@ -56,7 +56,8 @@ Adding AlexaPlusUnity to the skill
 ==================================
 
 The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the templete code.
-**Note**: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
+
+.. Note:: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
 
 1. Our cloned templete already has the ``alexaplusunity`` node module, but we still need to include it. Open ``index.js`` under ``lambda/custom/`` and add the following: ::
 

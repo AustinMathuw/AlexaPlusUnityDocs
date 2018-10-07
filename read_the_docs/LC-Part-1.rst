@@ -104,7 +104,7 @@ Adding the LightControl script into the Unity project
     }
 
 The above code is our skeleton for our script. We will fill this skeleton step by step. The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the skeleton.
-**Note**: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
+.. Note:: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
 
 5. Define the class variables: ::
 
@@ -278,11 +278,11 @@ Adding the Alexa Manager GameObject in Unity
 4. Fill the ``Subscribe Key`` with the PubNub subscribe key you made note of during configuration.
 5. Fill the ``Channel`` with the code sent from the Alexa skill when it launches.
 
-**Note**: You will have to fill this in later, as we have not set up the Alexa skill yet.
+.. Note:: You will have to fill this in later, as we have not set up the Alexa skill yet.
 
 6. Fill the ``Table Name`` with the one your Alexa skill created.
 
-**Note**: You will have to fill this in later, as we have not set up the Alexa skill yet.
+.. Note:: You will have to fill this in later, as we have not set up the Alexa skill yet.
 
 7. Fill the ``Identity Pool Id`` with the one you created during configuration.
 8. Fill the ``AWS Region`` with the one you made note of during configuration.
