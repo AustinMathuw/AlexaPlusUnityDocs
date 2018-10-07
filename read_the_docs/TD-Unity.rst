@@ -19,11 +19,18 @@ Declaration ::
     public AlexaBaseData(EventSystem eventSystem)
 
 Parameters
-+-------------------------+-------------------------+
-| Type                    | Name                    |
-+=========================+=========================+
-| EventSystem             | EventSystem             |
-+-------------------------+-------------------------+
+
+.. list-table:: 
+    :widths: 10 10 10
+    :header-rows: 1
+    :stub-columns: 0
+
+    * - Type
+      - Name
+      - Description
+    * - EventSystem
+      - eventSystem
+      - 
 
 Properties
 ~~~~~~~~~~
