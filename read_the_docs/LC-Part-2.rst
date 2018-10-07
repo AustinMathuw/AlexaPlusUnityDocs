@@ -60,9 +60,8 @@ The steps below corrospond to the step numbers in the skeleton. Place the code f
 
 1. Our cloned templete already has the ``alexaplusunity`` node module, but we still need to include it. Open ``index.js`` under ``lambda/custom/`` and add the following: ::
 
-        var alexaPlusUnity = require('alexaplusunity');
-        alexaPlusUnity.setPubNub("<YOUR_PUB_KEY>", "<YOUR_SUB_KEY>");
-        alexaPlusUnity.setDebug(true); //True if you want detailed logs from AlexaPlusUnity
+        var alexaPlusUnityClass = require('alexaplusunity');
+        var alexaPlusUnity = alexaPlusUnityClass("<YOUR_PUBNUB_PUB_KEY>", "<YOUR_PUBNUB_SUB_KEY>", true); //Third parameter enables verbose logging
 
 2. In our example skill, we will use state management to confirm that the user has connected to our game. Insert the code below inside of the LaunchRequestHandler: ::
 
