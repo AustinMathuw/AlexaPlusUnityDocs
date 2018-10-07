@@ -17,8 +17,8 @@
    :caption: DOCUMENTATION
    :hidden:
 
-   TD-Unity3D
-   TD-NodeJS
+   Unity <>
+   NodeJS <https://www.npmjs.com/package/alexaplusunity>
 
 ****************
 Alexa Plus Unity

@@ -2,7 +2,7 @@
 Setup for Alexa Skills
 **********************
 
-Now that we have configured our Unity3D workspace, it's time to set up the Alexa Skill!
+Now that we have configured our Unity workspace, it's time to set up the Alexa Skill!
 
 Prerequisites
 =============

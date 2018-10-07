@@ -1,6 +1,6 @@
-****************************
-Creating the Unity3D Project
-****************************
+**************************
+Creating the Unity Project
+**************************
 
 Let's setup the Unity Project!
 
@@ -9,7 +9,7 @@ If you get lost or want to see the final project, the light control demo scene i
 Prerequisites
 =============
 
--  `Unity3D <https://unity3d.com/>`_ version 4.x or above.
+-  `Unity <https://unity3d.com/>`_ version 4.x or above.
 -  An `AWS Account <https://aws.amazon.com/>`_
 
 Obtain an Identity Pool ID using Amazon Cognito
@@ -35,7 +35,7 @@ Your Identity Pool is now configured to use the required AWS services for Alexa 
 Creating the project
 ====================
 
-1. Open Unity3D.
+1. Open Unity.
 2. Create a new 3D project.
 3. Add a cube to the SampleScene (``GameObject -> 3D Object -> Cube``).
 
@@ -48,8 +48,8 @@ Integrating the Alexa Plus Unity Package
 
 You should now see two new folders in you Assets folder, **Amazon Alexa** and **Plugins**.
 
-Adding the LightControl script into the Unity3D project
-=======================================================
+Adding the LightControl script into the Unity project
+=====================================================
 
 1. With your project **open**, create a new script (``Assets -> Create -> C# Script``) and name it **LightControl**.
 2. Open your LightControl script by double-clicking it.
@@ -249,8 +249,8 @@ These variables are necessary to preform initialization and enable reusablity of
 
 14. Be sure to save this file!
 
-Adding the Alexa Manager GameObject in Unity3D
-==============================================
+Adding the Alexa Manager GameObject in Unity
+============================================
 
 1. Create a new **Empty GameObject** (``GameObject -> Create Empty``) and name it **Amazon Alexa**.
 2. With your new GameObject selected, click **Add Component**, type **AlexaAlexaManager** and select the AlexaAlexaManager script.
@@ -270,4 +270,4 @@ Adding the Alexa Manager GameObject in Unity3D
 Wrapping Up
 ===========
 
-Aside from a few minor updates, have finished the Unity3D project! Next Step: The Alexa Skill!
+Aside from a few minor updates, have finished the Unity project! Next Step: The Alexa Skill!
