@@ -27,6 +27,8 @@
   :width: 800
   :alt: Logo
 
+|  
+
 ****************
 Alexa Plus Unity
 ****************
