@@ -8,7 +8,7 @@
           ]
         }
       ],
-      "dest": "api/Unity",
+      "dest": "api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
@@ -17,14 +17,9 @@
     "content": [
       {
         "files": [
-          "api/Unity/**.yml",
-          "api/Unity/index.md"
+          "api/**.yml",
+          "api/index.md"
         ]
-      },
-      {
-        "files": ["**/*.yml"],
-        "src": "yml",
-        "dest": "api/Alexa"
       },
       {
         "files": [
