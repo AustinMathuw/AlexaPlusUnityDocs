@@ -13,8 +13,8 @@ Prerequisites
 Integrating the Alexa Plus Unity SDK into your Unity project
 ============================================================
 
-1. Download the ``AlexaPlusUnity.unitypackage`` from the `Releases <https://github.com/AustinMathuw/AlexaPlusUnity/releases>`_ tab in the GitHub project.
-2. Open your project in Unity.
-3. Open your newly downloaded ``AlexaPlusUnity.unitypackage`` and import the package.
+1. Download Alexa Plus Unity from the `Unity Asset Store <http://u3d.as/1kfP>`_.
+2. Add the asset package to your Unity project.
+3. Make sure everything is checked and click **Import**.
 
 That's it! However, in order to handle the communication to and from Alexa, you need to create your own script to initalize the manager. See a Tutorial for a more in-depth implementation.
