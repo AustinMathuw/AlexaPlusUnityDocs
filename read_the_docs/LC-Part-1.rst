@@ -105,7 +105,7 @@ Adding the LightControl script into the Unity project
 
 The above code is our skeleton for our script. We will fill this skeleton step by step. The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the skeleton.
 
-.. Note:: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
+.. Note:: There may be IDE errors as we continue, but those will be resolved at the end when the skeleton is complete.
 
 5. Define the class variables: ::
 
@@ -294,4 +294,4 @@ Adding the Alexa Manager GameObject in Unity
 Wrapping Up
 ===========
 
-Aside from a few minor updates, have finished the Unity project! Next Step: The Alexa Skill!
+Aside from a few minor updates, we have finished the Unity project! Next Step: The Alexa Skill!

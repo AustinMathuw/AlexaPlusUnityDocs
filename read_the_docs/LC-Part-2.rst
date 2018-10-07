@@ -57,7 +57,7 @@ Adding AlexaPlusUnity to the skill
 
 The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the templete code.
 
-.. Note:: There may be IDE errors as we continue, but those will be resolve at the end when the skeleton is complete.
+.. Note:: There may be IDE errors as we continue, but those will be resolved at the end when the skeleton is complete.
 
 1. Our cloned templete already has the ``alexaplusunity`` node module, but we still need to include it. Open ``index.js`` under ``lambda/custom/`` and add the following: ::
 
@@ -81,9 +81,9 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
             message: state
         };
 
-4. Then we will send a the payload to our game and reply with a success or error if the payload failed to send: ::
+4. Then we will send the payload to our game and reply with a success or error if the payload failed to send: ::
 
-        var response = await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
+        var response = await alexaPlusUnity.publishMessage(payloadObj, attributes.PUBNUB_CHANNEL).then((data) => {
             return handlerInput.responseBuilder
                 .speak(speechText + reprompt)
                 .reprompt(reprompt)
@@ -99,9 +99,9 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
             message: color
         };
 
-6. Then we will send a the payload to our game and reply with a success or error if the payload failed to send: ::
+6. Send the payload to our game and reply with a success or error if the payload failed to send: ::
 
-        var response = await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
+        var response = await alexaPlusUnity.publishMessage(payloadObj, attributes.PUBNUB_CHANNEL).then((data) => {
             return handlerInput.responseBuilder
                 .speak(speechText + reprompt)
                 .reprompt(reprompt)
@@ -110,41 +110,78 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
             return ErrorHandler.handle(handlerInput, err);
         });
 
-7. Lorem Ipsolm ::
+7. Add AlexaPlusUnity to the GetObjectInDirectionIntent (CompletedGetObjectInDirectionIntentHandler). We will create our payload object: ::
 
-        var response = await alexaGaming.createQueue(attributes.SQS_QUEUE).then(async (data) => {
-            attributes.SQS_QUEUE_URL = data.QueueUrl.toString();
+        var payloadObj = { 
+            type: "GetObject",
+            message: direction
+        };
 
-            var responseToReturn = responseBuilder
-                .speak(speechText)
+8. Send a the payload to our game and reply with a success or error if the payload failed to send: ::
+
+        var response = await alexaPlusUnity.publishMessageAndListenToResponse(payloadObj, attributes.PUBNUB_CHANNEL, 4000).then((data) => {
+            const speechText = 'Currently, ' + data.message.object + ' is ' + direction + ' you!';
+            const reprompt = ' What\'s next?';
+            return handlerInput.responseBuilder
+                .speak(speechText + reprompt)
                 .reprompt(reprompt)
-                .withSimpleCard('Alexa Plus Unity', "Here is your Player ID: " + attributes.SQS_QUEUE)
                 .getResponse();
+        }).catch((err) => {
+            return ErrorHandler.handle(handlerInput, err);
+        });
 
-            var userId = handlerInput.requestEnvelope.session.user.userId;
-            return await sendUserId(userId, attributes, handlerInput, responseToReturn);
-            }).catch((err) => {
-                return ErrorHandler.handle(handlerInput, err);
-            }
-        );
+9. Create the user's unique channel: ::
 
-8. Lorem Ipsolm ::
+        var response = await alexaPlusUnity.addChannelToGroup(attributes.PUBNUB_CHANNEL, "AlexaPlusUnityTest").then(async (data) => {
+        var responseToReturn = responseBuilder
+            .speak(speechText)
+            .reprompt(reprompt)
+            .withSimpleCard('Alexa Plus Unity', "Here is your Player ID: " + attributes.PUBNUB_CHANNEL)
+            .getResponse();
+
+        var userId = handlerInput.requestEnvelope.session.user.userId;
+        return await sendUserId(userId, attributes, handlerInput, responseToReturn);
+        }).catch((err) => {
+            return ErrorHandler.handle(handlerInput, err);
+        });
+
+10. Now, we need to send the game the user's Alexa ID so we can access their persistant session attributes. Create our payload object: ::
 
         var payloadObj = { 
             type: "AlexaUserId",
             message: userId
         };
 
-9. Lorem Ipsolm ::
+11. Send the payload to the game: ::
 
-        return await alexaGaming.publishEventSimple(JSON.stringify(payloadObj), attributes.SQS_QUEUE_URL).then((data) => {
+        return await alexaPlusUnity.publishMessage(payloadObj, attributes.PUBNUB_CHANNEL).then((data) => {
             return response;
         }).catch((err) => {
             return ErrorHandler.handle(handlerInput, err);
         });
 
-10. Lorem Ipsolm ::
+12. Lastly, we need to initialize the skills attributes ::
 
         attributes.SETUP_STATE = "STARTED";
-        attributes.SQS_QUEUE = await alexaGaming.uniqueQueueGenerator();
-        attributes.SQS_QUEUE_URL = null;
+        var newChannel = await alexaPlusUnity.uniqueQueueGenerator("AlexaPlusUnityTest");
+        
+        if(newChannel != null) {
+            attributes.PUBNUB_CHANNEL = newChannel;
+        } else {
+            return null;
+        }
+
+Deploying the Skill
+===================
+
+1. Open a command prompt or terminal and navigate to <Template Location>
+2. Type ``ask deploy`` to deploy the skill.
+
+.. Note:: This will only work if you set up the `ASK CLI <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_ correctly!
+
+Wrapping Up
+===========
+
+At this point, you should be able to test the skill by saying, "Alexa, open unity light".
+
+We have finished the Alexa Skill! Next Step: Testing!
