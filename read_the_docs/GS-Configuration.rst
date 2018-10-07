@@ -40,7 +40,7 @@ For Alexa Plus Unity to fuction, we need to configure PubNub to allow the Unity 
 Prerequisites
 ^^^^^^^^^^^^^
 
--  A `PubNub <https://www.pubnub.com/>`_ account
+-  A `PubNub Account <https://www.pubnub.com/>`_
 
 Create a New App on PubNub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
