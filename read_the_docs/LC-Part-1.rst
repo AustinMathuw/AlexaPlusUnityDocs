@@ -22,18 +22,18 @@ Creating the project
 Integrating the Alexa Plus Unity Package
 ========================================
 
-1. Download the ``AlexaPlusUnity.unitypackage`` from the `Releases <https://github.com/AustinMathuw/AlexaPlusUnity/releases>`_ tab in the GitHub project.
-2. With your project **open**, double click the package file you just downloaded.
+1. Download Alexa Plus Unity from the `Unity Asset Store <http://u3d.as/1kfP>`_.
+2. Add the asset package to your Unity project.
 3. Make sure everything is checked and click **Import**.
 
-You should now see two new folders in you Assets folder, **Amazon Alexa** and **Plugins**.
+You should now see a new folder in you Assets folder, **Alexa Plus Unity**.
 
 Adding the LightControl script into the Unity project
 =====================================================
 
 1. With your project **open**, create a new script (``Assets -> Create -> C# Script``) and name it **LightControl**.
 2. Open your LightControl script by double-clicking it.
-3. Deleate everything in the script.
+3. Delete everything in the script.
 4. Copy and paste the code below into your LightControl script: ::
 
     using Amazon;
@@ -76,23 +76,29 @@ Adding the LightControl script into the Unity project
             //Step 10: Listen for new messages from the Alexa skill
             
         }
+
+        private void GetObjectInDirection(string type, string message)
+        {
+            //Step 11: Get the object in a specific direction (Note: For this demo, there is only one object, the cube)
+
+        }
         
         public void UpdateLight(string type, string value, GetSessionAttributesEventData eventData)
         {
-            //Step 11: Update the light based on the incoming message, then save the state of the light through the skill's session attributes
+            //Step 12: Update the light based on the incoming message, then save the state of the light through the skill's session attributes
             
         }
 
         public void SetAttributesCallback(SetSessionAttributesEventData eventData)
         {
-            //Step 12: Callback for when session attributes have been updated
+            //Step 13: Callback for when session attributes have been updated
             
         }
 
         
         public void OnMessageDeleted(ErrorEventData eventData)
         {
-            //Step 13: Callback for when a message is deleted
+            //Step 14: Callback for when a message is deleted
             
         }
     }
@@ -102,20 +108,26 @@ The above code is our skeleton for our script. We will fill this skeleton step b
 
 5. Define the class variables: ::
 
-    public string sqsQueue;
+    public string publishKey;
+    public string subscribeKey;
+    public string channel;
+    public string tableName;
     public string identityPoolId;
     public string AWSRegion = RegionEndpoint.USEast1.SystemName;
-    public string tableName;
+    public bool debug = false;
     public GameObject lightCube;
+    public GameObject camera;
+
     private Dictionary<string, AttributeValue> attributes;
     private AmazonAlexaManager alexaManager;
 
 These variables are necessary to preform initialization and enable reusablity of the Alexa Manager within our LightControl script.
 
-6. Find and initialize the Alexa Manager: ::
+6. Initialize the Alexa Manager: ::
 
-        alexaManager = GetComponent<AmazonAlexaManager>(); //Get the manager script
-        StartCoroutine(alexaManager.StartAlexa(sqsQueue, tableName, identityPoolId, AWSRegion, OnAlexaMessage)); //Initialize the Alexa Manager
+        UnityInitializer.AttachToGameObject(gameObject);
+        AWSConfigs.HttpClient = AWSConfigs.HttpClientOption.UnityWebRequest;
+        alexaManager = new AmazonAlexaManager(publishKey, subscribeKey, channel, tableName, identityPoolId, AWSRegion, this.gameObject, OnAlexaMessage, null, debug); //Initialize the Alexa Manager
 
 7. Tell the skill that the game has completed setup and is ready to play: ::
 
@@ -133,58 +145,86 @@ These variables are necessary to preform initialization and enable reusablity of
 
 9. Update the light to blue when the spacebar is pressed: ::
 
-        if (!PlayerPrefs.HasKey("AlexaUserId")) //If the AlexaUserId has not been recieved from Alexa (If the user has not opened the skill)
-            Debug.LogError("'AlexaUserId' not found in PlayerPrefs. We must establish connection from Alexa to set this. Please open the skill to set the 'AlexaUserId' PlayerPref.");
-
-        alexaManager.GetSessionAttributes((result) =>
+        if (!PlayerPrefs.HasKey("alexaUserDynamoKey")) //If the AlexaUserId has not been recieved from Alexa (If the user has not opened the skill)
         {
-            if (result.IsError)
-                Debug.LogError(result.Exception.Message);
-            UpdateLight("Color", "blue", result);
-        });
+            Debug.LogError("'alexaUserDynamoKey' not found in PlayerPrefs. We must establish connection from Alexa to set this. Please open the skill to set the 'AlexaUserId' PlayerPref.");
+        } else {
+            alexaManager.GetSessionAttributes((result) =>
+            {
+                if (result.IsError)
+                    Debug.LogError(result.Exception.Message);
+                UpdateLight("Color", "blue", result);
+            });
+        }
 
 10. Listen for new messages from the Alexa skill: ::
 
         Debug.Log("OnAlexaMessage");
 
-        AlexaIncomingMessage messageBody = JsonUtility.FromJson<AlexaIncomingMessage>(eventData.Message.Body);
+        Dictionary<string, object> message = eventData.Message;
 
-        //Get Session Attributes with in-line defined callback 
+        //Get Session Attributes with in-line defined callback
+        switch (message["type"] as string)
+        {
+            case "AlexaUserId":
+                Debug.Log("AlexaUserId: " + message["message"]);
+                alexaManager.alexaUserDynamoKey = message["message"] as string;
+                break;
+        }
+
         alexaManager.GetSessionAttributes((result) =>
         {
             if (result.IsError)
                 Debug.LogError(eventData.Exception.Message);
 
-            switch (messageBody.type)
+            switch (message["type"] as string)
             {
                 case "AlexaUserId":
-                    Debug.Log("AlexaUserId: " + messageBody.message);
                     ConfirmSetup(result);
-                    goto case "delete";
+                    break;
                 case "Color":
-                    Debug.Log("Requested Light Color: " + messageBody.message);
-                    UpdateLight(messageBody.type, messageBody.message, result);
-                    goto case "delete";
+                    Debug.Log("Requested Light Color: " + message["message"]);
+                    UpdateLight(message["type"] as string, message["message"] as string, result);
+                    break;
                 case "State":
-                    Debug.Log("Requested Light State: " + messageBody.message);
-                    UpdateLight(messageBody.type, messageBody.message, result);
-                    goto case "delete";
-                case "delete":
-                    var receiptHandle = eventData.Message.ReceiptHandle;
-                    alexaManager.DeleteMessage(receiptHandle, OnMessageDeleted);
+                    Debug.Log("Requested Light State: " + message["message"]);
+                    UpdateLight(message["type"] as string, message["message"] as string, result);
+                    break;
+                case "GetObject":
+                    Debug.Log("Requested object direction: " + message["message"]);
+                    GetObjectInDirection(message["type"] as string, message["message"] as string);
                     break;
                 default:
                     break;
             }
         });
 
-11. Update the light: ::
+11. Get object in a direction: ::
+
+        RaycastHit hit;
+        Dictionary<string, string> messageToAlexa = new Dictionary<string, string>();
+        Vector3 forward = camera.transform.forward * 10;
+        messageToAlexa.Add("object", "nothing");
+
+        if (Physics.Raycast(camera.transform.position, forward, out hit, (float)15.0))
+        {
+            if (hit.rigidbody)
+            {
+                messageToAlexa.Remove("object");
+                messageToAlexa.Add("object", hit.rigidbody.name);
+            }
+        }
+
+        alexaManager.SendToAlexaSkill(messageToAlexa, OnMessageSent);
+
+12. Update the light: ::
 
         attributes = eventData.Values;
-        if(type == "Color")
+        if (type == "Color")
         {
             attributes["color"] = new AttributeValue { S = value }; //Set color attribute to a string value
-        } else if(type == "State")
+        }
+        else if (type == "State")
         {
             attributes["state"] = new AttributeValue { S = value }; //Set state attribute to a string value
         }
@@ -215,37 +255,40 @@ These variables are necessary to preform initialization and enable reusablity of
         }
         alexaManager.SetSessionAttributes(attributes, SetAttributesCallback);  //Save Attributes for Alexa to use
 
-12. Let's be notified when there is a error setting the attributes: ::
+13. Let's be notified when there is a error setting the attributes: ::
 
         Debug.Log("OnSetAttributes");
         if (eventData.IsError)
             Debug.LogError(eventData.Exception.Message);
 
-13. Let's be notified when there is a error deleting a message: ::
+14. Let's be notified when there is a error deleting a message: ::
 
-        Debug.Log("OnDeleteMessage");
+        Debug.Log("OnMessageSent");
         if (eventData.IsError)
             Debug.LogError(eventData.Exception.Message);
 
-14. Be sure to save this file!
+15. Be sure to save this file!
 
 Adding the Alexa Manager GameObject in Unity
 ============================================
 
 1. Create a new **Empty GameObject** (``GameObject -> Create Empty``) and name it **Amazon Alexa**.
-2. With your new GameObject selected, click **Add Component**, type **AlexaAlexaManager** and select the AlexaAlexaManager script.
-3. Click **Add Component** again, type **LightControl** and select the LightControl script.
-4. Fill the ``SQS Queue`` with the code sent from the Alexa skill when it launches.
+2. With your new GameObject selected, click **Add Component**, type **LightControl** and select the LightControl script.
+3. Fill the ``Publish Key`` with the PubNub publish key you made note of during configuration.
+4. Fill the ``Subscribe Key`` with the PubNub subscribe key you made note of during configuration.
+5. Fill the ``Channel`` with the code sent from the Alexa skill when it launches.
 
 **Note**: You will have to fill this in later, as we have not set up the Alexa skill yet.
 
-5. Fill the ``Identity Pool Id`` with the one you created earlier.
-6. Fill the ``AWS Region`` with the one you made note of earlier.
-7. Fill the ``Table Name`` with the one your Alexa skill created.
+6. Fill the ``Table Name`` with the one your Alexa skill created.
 
 **Note**: You will have to fill this in later, as we have not set up the Alexa skill yet.
 
-8. Drag the **Cube** from the hierarchy into the box next to ``Light Cube``.
+7. Fill the ``Identity Pool Id`` with the one you created during configuration.
+8. Fill the ``AWS Region`` with the one you made note of during configuration.
+9. Check the box next to ``Debug`` to enable detailed logging.
+10. Drag the **Cube** from the hierarchy into the box next to ``Light Cube``.
+11. Drag the **Main Camera** from the hierarchy into the box next to ``Camera``.
 
 Wrapping Up
 ===========
