@@ -13,6 +13,7 @@
    LC-Introduction
    LC-Part-1
    LC-Part-2
+   LC-Conclusion
 
 .. toctree::
    :caption: DOCUMENTATION
