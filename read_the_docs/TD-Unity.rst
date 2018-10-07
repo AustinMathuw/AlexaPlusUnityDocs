@@ -5,14 +5,14 @@ Unity C# Technical Docs
 Classes
 =======
 
-`AlexaBaseData <#alexabasedata>`_.
-`AmazonAlexaManager <#amazonalexamanager>`_.
-`ConnectionStatusEventData <#connectionstatuseventdata>`_.
-`ErrorEventData <#erroreventdata>`_.
-`GetSessionAttributesEventData <#getsessionattributeseventdata>`_.
-`HandleMessageEventData <#handlemessageeventdata>`_.
-`MessageSentEventData <#messagesenteventdata>`_.
-`SetSessionAttributesEventData <#setsessionattributeseventdata>`_.
+|`AlexaBaseData <#alexabasedata>`_
+|`AmazonAlexaManager <#amazonalexamanager>`_
+|`ConnectionStatusEventData <#connectionstatuseventdata>`_
+|`ErrorEventData <#erroreventdata>`_
+|`GetSessionAttributesEventData <#getsessionattributeseventdata>`_
+|`HandleMessageEventData <#handlemessageeventdata>`_
+|`MessageSentEventData <#messagesenteventdata>`_
+|`SetSessionAttributesEventData <#setsessionattributeseventdata>`_
 
 AlexaBaseData
 =============
