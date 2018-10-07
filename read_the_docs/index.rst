@@ -2,6 +2,7 @@
    :caption: GETTING STARTED
    :hidden:
    
+   GS-Configuration
    GS-Part-1
    GS-Part-2
 

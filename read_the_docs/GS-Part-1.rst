@@ -2,13 +2,13 @@
 Setup for Unity
 ***************
 
-Let's setup the Alexa Plus Unity SDK!
+Let's setup the Alexa Plus SDK for Unity!
 
 Prerequisites
 =============
 
 -  `Unity <https://unity3d.com/>`_ version 4.x or above.
--  An `AWS Account <https://aws.amazon.com/>`_
+-  Configure AWS as explained `here <https://alexaplusunity.readthedocs.io/en/latest/AWS-SetUp.html<`_.
 
 Integrating the Alexa Plus Unity SDK into your Unity project
 ============================================================
