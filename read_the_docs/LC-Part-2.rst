@@ -184,4 +184,4 @@ Wrapping Up
 
 At this point, you should be able to test the skill by saying, "Alexa, open unity light".
 
-We have finished the Alexa Skill! Next Step: Testing!
+We have finished the Alexa Skill!

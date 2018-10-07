@@ -281,10 +281,7 @@ Adding the Alexa Manager GameObject in Unity
 
 .. Note:: You will have to fill this in later, as we have not set up the Alexa skill yet.
 
-6. Fill the ``Table Name`` with the one your Alexa skill created.
-
-.. Note:: You will have to fill this in later, as we have not set up the Alexa skill yet.
-
+6. Fill the ``Table Name`` with **AlexaPlusUnityTest**.
 7. Fill the ``Identity Pool Id`` with the one you created during configuration.
 8. Fill the ``AWS Region`` with the one you made note of during configuration.
 9. Check the box next to ``Debug`` to enable detailed logging.
