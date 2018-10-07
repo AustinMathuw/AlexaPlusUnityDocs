@@ -1,8 +1,0 @@
-{
-    "source": {
-        "include": ["../../SDKs/AlexaSDK/index.js"]
-    },
-    "package": "../../SDKs/AlexaSDK/package.json",
-    "readme": "/README.md",
-    "destination": "yml"
-  }

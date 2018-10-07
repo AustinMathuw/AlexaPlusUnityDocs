@@ -13,10 +13,14 @@ Prerequisites
 Integrating the Alexa Plus Unity SDK into your Alexa Skill
 ==========================================================
 
-1. Download the ``alexa-gaming-cookbook.js`` from the `Releases <https://github.com/AustinMathuw/AlexaPlusUnity/releases>`_ tab in the GitHub project.
-2. Put the newly downloaded file in the root directory of your Alexa Skill
-3. Include the script in your skill with::
+1. Navigate to your skill fuction in an command prompt or terminal
+2. Install the AlexaPlusUnity package into yor skill's function: ``npm install alexaplusunity``
+3. Include the package in your skill with::
 
-    var alexaGaming = require('./alexa-gaming-cookbook.js');
+    var alexaPlusUnityClass = require('alexaplusunity');
 
-That's it! However, in order to handle the communication to and from your game, you need to use the script's methods. See the Tutorial for a more in-depth implementation.
+4. Create an instance of the class with::
+
+    var alexaPlusUnity = alexaPlusUnityClass("<YOUR_PUBNUB_PUB_KEY>", "<YOUR_PUBNUB_SUB_KEY>", true); //Third parameter enables verbose logging
+
+That's it! However, in order to handle the communication to and from your game, you need to use the script's methods. See a Tutorial or the `package page <https://www.npmjs.com/package/alexaplusunity>`_ for more in-depth information.
