@@ -10,10 +10,10 @@ Prerequisites
 -  `Unity <https://unity3d.com/>`_ version 4.x or above.
 -  Configure AWS and PubNub as explained `in configuration <https://alexaplusunity.readthedocs.io/en/latest/GS-Configuration.html>`_.
 
-Integrating the Alexa Plus Unity SDK into your Unity project
+Integrating the Games SDK for Alexa into your Unity project
 ============================================================
 
-1. Download Alexa Plus Unity from the `Unity Asset Store <http://u3d.as/1kfP>`_.
+1. Download Games SDK for Alexa from the `Unity Asset Store <http://u3d.as/1kfP>`_.
 2. Add the asset package to your Unity project.
 3. Make sure everything is checked and click **Import**.
 

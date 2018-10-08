@@ -5,7 +5,7 @@ Configuration
 AWS Configuration
 =================
 
-For Alexa Plus Unity to fuction, we need to configure AWS to allow the Unity project to communicate to DynamoDB (The Alexa Skill's persistant attributes).
+For Games SDK for Alexa to fuction, we need to configure AWS to allow the Unity project to communicate to DynamoDB (The Alexa Skill's persistant attributes).
 
 Prerequisites
 ^^^^^^^^^^^^^
@@ -19,7 +19,7 @@ Obtain an Identity Pool ID using Amazon Cognito
 2. Enter a name for your Identity Pool and check the checkbox to enable access to unauthenticated identities. Click **Create Pool** to create your identity pool.
 3. Click **Allow** to create the two default roles associated with your identity pool--one for unauthenticated users and one for authenticated users. These default roles provide your identity pool access to Cognito Sync and Mobile Analytics.
 
-The next page displays code. Take note of the displayed **Identity Pool ID** and the **Region** you set up the Identity Pool in as you will need them when setting up Alexa Plus Unity.
+The next page displays code. Take note of the displayed **Identity Pool ID** and the **Region** you set up the Identity Pool in as you will need them when setting up Games SDK for Alexa.
 
 Attach Polices to the Identity Pool default roles in AWS IAM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -30,12 +30,12 @@ Attach Polices to the Identity Pool default roles in AWS IAM
 4. Find and check the **AmazonDynamoDBFullAccess** policy.
 5. Click **Attach Policy**.
 
-Your Identity Pool is now configured to use the required AWS services for Alexa Plus Unity to function.
+Your Identity Pool is now configured to use the required AWS services for Games SDK for Alexa to function.
 
 PubNub Configuration
 ====================
 
-For Alexa Plus Unity to fuction, we need to configure PubNub to allow the Unity project to communicate with the Alexa Skill.
+For Games SDK for Alexa to fuction, we need to configure PubNub to allow the Unity project to communicate with the Alexa Skill.
 
 Prerequisites
 ^^^^^^^^^^^^^
@@ -52,7 +52,7 @@ Create a New App on PubNub
 The next page displays your keysets. You can create as many as you keysets as you wish, but for our purposes, we can just use the Demo Keyset.
 
 4. Click the Demo Keyset.
-5. Make note of both the publish and subscribe keys as you will need them when setting up Alexa Plus Unity.
+5. Make note of both the publish and subscribe keys as you will need them when setting up Games SDK for Alexa.
 6. Enable the **Stream Controller** and the **Storage and Playback** Application add-ons.
 
-Your PubNub App is now configured for Alexa Plus Unity.
+Your PubNub App is now configured for Games SDK for Alexa.

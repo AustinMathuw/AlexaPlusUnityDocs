@@ -19,14 +19,14 @@ Creating the project
 2. Create a new 3D project.
 3. Add a cube to the SampleScene (``GameObject -> 3D Object -> Cube``).
 
-Integrating the Alexa Plus Unity Package
+Integrating the Games SDK for Alexa Package
 ========================================
 
-1. Download Alexa Plus Unity from the `Unity Asset Store <http://u3d.as/1kfP>`_.
+1. Download Games SDK for Alexa from the `Unity Asset Store <http://u3d.as/1kfP>`_.
 2. Add the asset package to your Unity project.
 3. Make sure everything is checked and click **Import**.
 
-You should now see a new folder in you Assets folder, **Alexa Plus Unity**.
+You should now see a new folder in you Assets folder, **Games SDK for Alexa**.
 
 Adding the LightControl script into the Unity project
 =====================================================

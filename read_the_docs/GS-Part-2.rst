@@ -10,7 +10,7 @@ Prerequisites
 -  An `NPM <https://www.npmjs.com/>`_ project. For information on how to set up a NPM project, please see `this <https://docs.npmjs.com/getting-started/creating-node-modules>`_.
 -  A suitable Node.js development environment. The ASK SDK v2 for Node.js requires Node 4.3.2 or above.
 
-Integrating the Alexa Plus Unity SDK into your Alexa Skill
+Integrating the Games SDK for Alexa into your Alexa Skill
 ==========================================================
 
 1. Navigate to your skill fuction in an command prompt or terminal

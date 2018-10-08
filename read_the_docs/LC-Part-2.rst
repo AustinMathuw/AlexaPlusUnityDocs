@@ -136,7 +136,7 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
         var responseToReturn = responseBuilder
             .speak(speechText)
             .reprompt(reprompt)
-            .withSimpleCard('Alexa Plus Unity', "Here is your Player ID: " + attributes.PUBNUB_CHANNEL)
+            .withSimpleCard('Games SDK for Alexa', "Here is your Player ID: " + attributes.PUBNUB_CHANNEL)
             .getResponse();
 
         var userId = handlerInput.requestEnvelope.session.user.userId;

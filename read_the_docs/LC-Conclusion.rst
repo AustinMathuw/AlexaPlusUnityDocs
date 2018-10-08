@@ -2,7 +2,7 @@
 Conclusion
 **********
 
-Congratulations! You have completed the Alexa Plus Unity Light Control Demo!
+Congratulations! You have completed the Games SDK for Alexa Light Control Demo!
 
 Testing the Light Control Demo
 ==============================
