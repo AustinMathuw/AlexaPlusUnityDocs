@@ -29,11 +29,11 @@
 
 |  
 
-****************
-Alexa Plus Unity
-****************
+*******************
+Games SDK for Alexa
+*******************
 
-The Alexa Plus Unity SDK was built to help with the expansion of Amazon's Alexa into video games, bringing a whole new layer of immersion into gaming.
+The Games SDK for Alexa was built to help with the expansion of Amazon's Alexa into video games made with the Unity game engine, bringing a whole new layer of immersion into gaming.
 
 Ready to get started? Follow the guides in the navigation bar to learn how to use the platform!
 

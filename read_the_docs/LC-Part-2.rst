@@ -52,8 +52,8 @@ Our Example Skill has the following Intents:
     * Closes the skill
 
 
-Adding AlexaPlusUnity to the skill
-==================================
+Adding Games SDK for Alexa to the skill
+=======================================
 
 The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the templete code.
 
@@ -74,7 +74,7 @@ The steps below corrospond to the step numbers in the skeleton. Place the code f
 
 In the code block above, we are checking to see if we are still in the ``SETUP_STATE``. If we are, then run the method ``launchSetUp()`` and build our response. If we are not in the ``SETUP_STATE``, then use the response we already built.
 
-3. In the next steps, we will add AlexaPlusUnity to the FlipSwitchIntent (CompletetedFlipSwitchIntentHandler). We will start by creating a payload object for the intent: ::
+3. In the next steps, we will add Games SDK for Alexa to the FlipSwitchIntent (CompletetedFlipSwitchIntentHandler). We will start by creating a payload object for the intent: ::
 
         var payloadObj = { 
             type: "State",
@@ -92,7 +92,7 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
             return ErrorHandler.handle(handlerInput, err);
         });
 
-5. Now, we will add AlexaPlusUnity to the ChangeColorIntent (CompletedChangeColorIntentHandler). We will create our payload object: ::
+5. Now, we will add Games SDK for Alexa to the ChangeColorIntent (CompletedChangeColorIntentHandler). We will create our payload object: ::
 
         var payloadObj = { 
             type: "Color",
@@ -110,7 +110,7 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
             return ErrorHandler.handle(handlerInput, err);
         });
 
-7. Add AlexaPlusUnity to the GetObjectInDirectionIntent (CompletedGetObjectInDirectionIntentHandler). We will create our payload object: ::
+7. Add Games SDK for Alexa to the GetObjectInDirectionIntent (CompletedGetObjectInDirectionIntentHandler). We will create our payload object: ::
 
         var payloadObj = { 
             type: "GetObject",

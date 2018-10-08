@@ -4,7 +4,7 @@ Creating the Unity Project
 
 Let's setup the Unity Project!
 
-If you get lost or want to see the final project, the light control demo scene is located in ``Amazon Plus Unity\Examples``. You will need to create a project and import ``AlexaPlusUnity.unitypackage`` to gain access to this folder. 
+If you get lost or want to see the final project, the light control demo scene is located in ``Amazon Plus Unity\Examples``. You will need to create a project and add the Games SDK for Alexa asset package from the Unity Asset Store to gain access to this folder. 
 
 Prerequisites
 =============
@@ -49,7 +49,7 @@ Adding the LightControl script into the Unity project
 
         // Use this for initialization
         void Start () {
-            //Step 6: Add AlexaPlusUnity initialization
+            //Step 6: Add Games SDK for Alexa initialization
 
         }
 
