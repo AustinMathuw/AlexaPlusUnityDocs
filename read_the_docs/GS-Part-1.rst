@@ -2,7 +2,7 @@
 Setup for Unity
 ***************
 
-Let's setup the Alexa Plus SDK for Unity!
+Let's setup the Games SDK for Alexa for Unity!
 
 Prerequisites
 =============
