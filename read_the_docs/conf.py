@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Alexa Plus Unity'
+project = 'Games SDK for Alexa'
 copyright = '2018, Austin Wilson'
 author = 'Austin Wilson'
 
@@ -128,7 +128,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'AlexaPlusUnity.tex', 'Alexa Plus Unity Documentation',
+    (master_doc, 'Games SDK for Alexa.tex', 'Games SDK for Alexa Documentation',
      'Austin Wilson', 'manual'),
 ]
 
@@ -138,7 +138,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'alexaplusunity', 'Alexa Plus Unity Documentation',
+    (master_doc, 'games-sdk-for-alexa', 'Games SDK for Alexa Documentation',
      [author], 1)
 ]
 
@@ -149,7 +149,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'AlexaPlusUnity', 'Alexa Plus Unity Documentation',
-     author, 'AlexaPlusUnity', 'One line description of project.',
+    (master_doc, 'Games SDK for Alexa', 'Games SDK for Alexa Documentation',
+     author, 'Games SDK for Alexa', 'One line description of project.',
      'Miscellaneous'),
 ]
