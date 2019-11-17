@@ -96,9 +96,9 @@ Adding the LightControl script into the Unity project
         }
 
         
-        public void OnMessageDeleted(ErrorEventData eventData)
+        public void OnMessageSent(ErrorEventData eventData)
         {
-            //Step 14: Callback for when a message is deleted
+            //Step 14: Callback for when a message is sent
             
         }
     }
