@@ -96,7 +96,7 @@ Adding the LightControl script into the Unity project
         }
 
         
-        public void OnMessageSent(ErrorEventData eventData)
+        public void OnMessageSent(MessageSentEventData eventData)
         {
             //Step 14: Callback for when a message is sent
             
