@@ -22,13 +22,6 @@
    TD-Unity
    Node.JS SDK Technical Docs <https://www.npmjs.com/package/alexaplusunity>
 
-.. toctree::
-   :caption: SUPPORT
-   :hidden:
-
-   LC-Conclusion
-   Contact Us <google.com>
-
 .. image:: https://s3.amazonaws.com/austinmatthuw/AlexaPlusUnity/AlexaPlusUnityFacebook.png
   :width: 800
   :alt: Logo
@@ -42,6 +35,11 @@ Games SDK for Alexa
 The Games SDK for Alexa was built to help with the expansion of Amazon's Alexa into video games made with the Unity game engine, bringing a whole new layer of immersion into gaming.
 
 Ready to get started? Follow the guides in the navigation bar to learn how to use the platform!
+
+Support
+=================
+
+Need help? Send us an `email <mailto:games-sdk-support\@tauon.tech>`_!
 
 The Explorer Demo
 =================
