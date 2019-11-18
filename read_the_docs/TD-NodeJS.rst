@@ -2,13 +2,4 @@
 Node.JS Technical Docs
 **********************
 
-Let's setup the Alexa Plus Unity SDK!
-
-Prerequisites
-=============
-
--  `Unity3D <https://unity3d.com/>`_ version 4.x or above.
--  An `AWS Account <https://aws.amazon.com/>`_
-
-Integrating the Alexa Plus Unity SDK into a project
-===================================================
+See the `NPM Project <https://www.npmjs.com/package/alexaplusunity>`_ for Node.JS Documentation.
