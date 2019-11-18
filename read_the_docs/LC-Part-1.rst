@@ -4,13 +4,13 @@ Creating the Unity Project
 
 Let's setup the Unity Project!
 
-If you get lost or want to see the final project, the light control demo scene is located in ``Amazon Plus Unity\Examples``. You will need to create a project and add the Games SDK for Alexa asset package from the Unity Asset Store to gain access to this folder. 
+If you get lost or want to see the final project, the light control demo scene is located in ``Games SDK for Alexa\Examples``. You will need to create a project and add the Games SDK for Alexa asset package from the Unity Asset Store to gain access to this folder. 
 
 Prerequisites
 =============
 
 -  `Unity <https://unity3d.com/>`_ version 4.x or above.
--  Configure AWS and PubNub as explained `in configuration <https://alexaplusunity.readthedocs.io/en/latest/GS-Configuration.html>`_.
+-  Configure AWS and PubNub as explained `in configuration <https://games-sdk-for-alexa.readthedocs.io/en/latest/GS-Configuration.html>`_.
 
 Creating the project
 ====================
