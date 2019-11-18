@@ -21,6 +21,6 @@ Integrating the Games SDK for Alexa into your Alexa Skill
 
 4. Create an instance of the class with::
 
-    var alexaPlusUnity = alexaPlusUnityClass("<YOUR_PUBNUB_PUB_KEY>", "<YOUR_PUBNUB_SUB_KEY>", true); //Third parameter enables verbose logging
+    var alexaPlusUnity = new alexaPlusUnityClass("<YOUR_PUBNUB_PUB_KEY>", "<YOUR_PUBNUB_SUB_KEY>", true); //Third parameter enables verbose logging
 
 That's it! However, in order to handle the communication to and from your game, you need to use the script's methods. See a Tutorial or the `package page <https://www.npmjs.com/package/alexaplusunity>`_ for more in-depth information.
