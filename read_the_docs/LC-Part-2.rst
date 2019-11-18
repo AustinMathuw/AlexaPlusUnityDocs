@@ -189,4 +189,6 @@ Wrapping Up
 
 At this point, you should be able to test the skill by saying, "Alexa, open unity light".
 
+.. Note:: You will likely get an error the first couple of times initially opening the skill. This is because the skill needs to create the DynamoDB table and it can take a couple of minutes to do so. See `this issue <https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/issues/292>`_ for more information.
+
 We have finished the Alexa Skill!
