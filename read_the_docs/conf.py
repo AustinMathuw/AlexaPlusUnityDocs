@@ -20,13 +20,13 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Games SDK for Alexa'
-copyright = '2018, Austin Wilson'
+copyright = '2019, Austin Wilson'
 author = 'Austin Wilson'
 
 # The short X.Y version
-version = ''
+version = '0.0.9'
 # The full version, including alpha/beta/rc tags
-release = 'August 2018'
+release = 'alpha'
 
 
 # -- General configuration ---------------------------------------------------
