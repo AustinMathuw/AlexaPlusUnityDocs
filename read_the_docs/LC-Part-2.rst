@@ -14,7 +14,7 @@ Prerequisites
 -  Have an `Amazon Developer Account <https://developer.amazon.com/>`_.
 -  Install the `ASK CLI <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_.
 
-Creating the skill
+Creating the Skill
 ==================
 
 1. Clone the example skill templete: ``git clone https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillTemplate.git``
@@ -52,7 +52,7 @@ Our Example Skill has the following Intents:
     * Closes the skill
 
 
-Adding Games SDK for Alexa to the skill
+Adding Games SDK for Alexa to the Skill
 =======================================
 
 The steps below corrospond to the step numbers in the skeleton. Place the code for each of the below steps under their step number in the templete code.
