@@ -39,7 +39,7 @@ Ready to get started? Follow the guides in the navigation bar to learn how to us
 Support
 =================
 
-Need help? Send us an `email <mailto:games-sdk-support\@tauon.tech>`_!
+Need help? Send us an email at `games-sdk-support@tauon.tech <mailto:games-sdk-support\@tauon.tech>`_!
 
 The Explorer Demo
 =================
