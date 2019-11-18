@@ -24,9 +24,9 @@ copyright = '2019, Austin Wilson'
 author = 'Austin Wilson'
 
 # The short X.Y version
-version = '0.0.9'
+version = ''
 # The full version, including alpha/beta/rc tags
-release = 'alpha'
+release = 'November 2019'
 
 
 # -- General configuration ---------------------------------------------------
