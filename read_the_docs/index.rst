@@ -22,6 +22,11 @@
    TD-Unity
    Node.JS SDK Technical Docs <https://www.npmjs.com/package/alexaplusunity>
 
+.. toctree::
+   :caption: SUPPORT
+   :hidden:
+
+   Contact Us <mailto:games-sdk-support@tauon.tech>
 
 .. image:: https://s3.amazonaws.com/austinmatthuw/AlexaPlusUnity/AlexaPlusUnityFacebook.png
   :width: 800
