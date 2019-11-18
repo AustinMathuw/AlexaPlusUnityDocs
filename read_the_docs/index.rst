@@ -23,9 +23,13 @@
    Node.JS SDK Technical Docs <https://www.npmjs.com/package/alexaplusunity>
 
 .. toctree::
-   :caption: SUPPORT
+   :caption: TUTORIAL (LIGHT CONTROL2)
    :hidden:
 
+   LC-Introduction
+   LC-Part-1
+   LC-Part-2
+   LC-Conclusion
    Contact Us <mailto:games-sdk-support@tauon.tech>
 
 .. image:: https://s3.amazonaws.com/austinmatthuw/AlexaPlusUnity/AlexaPlusUnityFacebook.png
