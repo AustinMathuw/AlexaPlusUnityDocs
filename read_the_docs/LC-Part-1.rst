@@ -10,7 +10,7 @@ Prerequisites
 =============
 
 -  `Unity <https://unity3d.com/>`_ version 4.x or above.
--  Configure AWS and PubNub as explained `in configuration <https://games-sdk-for-alexa.readthedocs.io/en/latest/GS-Configuration.html>`_.
+-  Configure AWS and Pubnub as explained `in configuration <https://games-sdk-for-alexa.readthedocs.io/en/latest/GS-Configuration.html>`_.
 
 Creating the project
 ====================
@@ -275,8 +275,8 @@ Adding the Alexa Manager GameObject in Unity
 
 1. Create a new **Empty GameObject** (``GameObject -> Create Empty``) and name it **Amazon Alexa**.
 2. With your new GameObject selected, click **Add Component**, type **LightControl** and select the LightControl script.
-3. Fill the ``Publish Key`` with the PubNub publish key you made note of during configuration.
-4. Fill the ``Subscribe Key`` with the PubNub subscribe key you made note of during configuration.
+3. Fill the ``Publish Key`` with the Pubnub publish key you made note of during configuration.
+4. Fill the ``Subscribe Key`` with the Pubnub subscribe key you made note of during configuration.
 5. Fill the ``Channel`` with the code sent from the Alexa skill when it launches.
 
 .. Note:: You will have to fill this in later, as we have not set up the Alexa skill yet.

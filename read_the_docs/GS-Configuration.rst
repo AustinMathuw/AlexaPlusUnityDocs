@@ -32,20 +32,20 @@ Attach Polices to the Identity Pool default roles in AWS IAM
 
 Your Identity Pool is now configured to use the required AWS services for Games SDK for Alexa to function.
 
-PubNub Configuration
+Pubnub Configuration
 ====================
 
-For Games SDK for Alexa to fuction, we need to configure PubNub to allow the Unity project to communicate with the Alexa Skill.
+For Games SDK for Alexa to fuction, we need to configure Pubnub to allow the Unity project to communicate with the Alexa Skill.
 
 Prerequisites
 ^^^^^^^^^^^^^
 
--  A `PubNub Account <https://www.pubnub.com/>`_.
+-  A `Pubnub Account <https://www.Pubnub.com/>`_.
 
-Create a New App on PubNub
+Create a New App on Pubnub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Log in to the `PubNub Admin Console <https://admin.pubnub.com/#/>`_ and click **Create new app**.
+1. Log in to the `Pubnub Admin Console <https://admin.Pubnub.com/#/>`_ and click **Create new app**.
 2. Enter a name for your new app. Click **Create** to create your new app.
 3. Click on your new app in the admin console.
 
@@ -55,4 +55,4 @@ The next page displays your keysets. You can create as many as you keysets as yo
 5. Make note of both the publish and subscribe keys as you will need them when setting up Games SDK for Alexa.
 6. Enable the **Stream Controller** and the **Storage and Playback** Application add-ons.
 
-Your PubNub App is now configured for Games SDK for Alexa.
+Your Pubnub App is now configured for Games SDK for Alexa.

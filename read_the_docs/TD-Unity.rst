@@ -143,10 +143,10 @@ Parameters
       - Description
     * - System.String
       - publishKey
-      - Your PubNub publish key.
+      - Your Pubnub publish key.
     * - System.String
       - subscribeKey
-      - Your PubNub subscribe key.
+      - Your Pubnub subscribe key.
     * - System.String
       - channel
       - Your player's channel. (Should be unique to the player)
