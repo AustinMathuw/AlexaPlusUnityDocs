@@ -17,7 +17,7 @@ Prerequisites
 Creating the skill
 ==================
 
-1. Clone the example skill templete: `git clone https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillTemplate.git`
+1. Clone the example skill templete: ``git clone https://github.com/AustinMathuw/AlexaPlusUnityExampleSkillTemplate.git``
 2. Open the template in a editor such as Visual Studio code
 3. Open a command prompt or terminal and navigate to <Template Location>/lambda/custom/
 4. In the command prompt or terminal, run ``npm install``
