@@ -114,21 +114,21 @@ In the code block above, we are checking to see if we are still in the ``SETUP_S
 
         var payloadObj = { 
             type: "GetObject",
-            message: direction
+            message: direction_id
         };
 
 8. Send a the payload to our game and reply with a success or error if the payload failed to send: ::
 
-        var response = await alexaPlusUnity.publishMessageAndListenToResponse(payloadObj, attributes.PUBNUB_CHANNEL, 4000).then((data) => {
-            const speechText = 'Currently, ' + data.message.object + ' is ' + direction + ' you!';
-            const reprompt = ' What\'s next?';
+         var response = await alexaPlusUnity.publishMessageAndListenToResponse(payloadObj, attributes.PUBNUB_CHANNEL, 4000).then((data) => {
+            speechText = 'Currently, ' + data.message.object + ' is ' + direction + ' of you!';
+        
             return handlerInput.responseBuilder
-                .speak(speechText + reprompt)
-                .reprompt(reprompt)
-                .getResponse();
-        }).catch((err) => {
+               .speak(speechText + reprompt)
+               .reprompt(reprompt)
+               .getResponse();
+         }).catch((err) => {
             return ErrorHandler.handle(handlerInput, err);
-        });
+         });
 
 9. Create the user's unique channel: ::
 
