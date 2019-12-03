@@ -207,9 +207,38 @@ These variables are necessary to preform initialization and enable reusablity of
         RaycastHit hit;
         Dictionary<string, string> messageToAlexa = new Dictionary<string, string>();
         Vector3 forward = camera.transform.forward * 10;
+        Vector3 backward = camera.transform.forward * -10;
+        Vector3 right = camera.transform.right * 10;
+        Vector3 left = camera.transform.right * -10;
+		Vector3 up = camera.transform.up * 10;
+		Vector3 down = camera.transform.up * -10;
+		
+		Vector3 direction = forward;
+		
+		switch(message) {
+			case "forward":
+				direction = forward;
+				break;
+			case "backward":
+				direction = backward;
+				break;
+			case "right":
+				direction = right;
+				break;
+			case "left":
+				direction = left;
+				break;
+			case "up":
+				direction = up;
+				break;
+			case "down":
+				direction = down;
+				break;
+		}
+		
         messageToAlexa.Add("object", "nothing");
 
-        if (Physics.Raycast(camera.transform.position, forward, out hit, (float)15.0))
+        if (Physics.Raycast(camera.transform.position, direction, out hit, (float)15.0))
         {
             if (hit.rigidbody)
             {
