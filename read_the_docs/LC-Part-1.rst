@@ -19,7 +19,7 @@ Creating the project
 2. Create a new 3D project.
 3. Add a cube to the SampleScene (``GameObject -> 3D Object -> Cube``).
 4. Add a Rididbody Component to the newly created cube (With the cube selected in the hierarchy, ``Component -> Add -> Rididbody``. Uncheck ``Use Gravity``)
-4. Click on the Main Camera and change the Y position transform value to ``0``.
+5. Click on the Main Camera and change the Y position transform value to ``0``.
 
 Integrating the Games SDK for Alexa Package
 ========================================
