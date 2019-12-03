@@ -263,7 +263,7 @@ These variables are necessary to preform initialization and enable reusablity of
         if (eventData.IsError)
             Debug.LogError(eventData.Exception.Message);
 
-14. Let's be notified when there is a error deleting a message: ::
+14. Let's be notified when there is a error sending a message: ::
 
         Debug.Log("OnMessageSent");
         if (eventData.IsError)
