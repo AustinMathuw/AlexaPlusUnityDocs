@@ -8,8 +8,8 @@ Cognito Identity Pool Policy
 ============================
 
 1. Navigate to the `Policies section in IAM <https://console.aws.amazon.com/iam/home?#/policies>`_.
-2. Click ``Create Policy``
-3. Click ``JSON``
+2. Click **Create Policy**
+3. Click **JSON**
 4. Copy and paste the following: ::
 
     {
@@ -30,8 +30,8 @@ Cognito Identity Pool Policy
 
 .. Note:: Replace ``AlexaPlusUnityTest`` with the name of your table.
 
-5. Click ``Review Policy``
-6. Give the Policy a name and click ``Create Policy``
+5. Click **Review Policy**
+6. Give the Policy a name and click **Create Policy**
 
 Attach this policy to the UnAuth IAM Role instead of the ``AmazonDynamoDBFullAccess`` policy.
 
@@ -39,8 +39,8 @@ Lambda Policy
 =============
 
 1. Navigate to the `Policies section in IAM <https://console.aws.amazon.com/iam/home?#/policies>`_.
-2. Click ``Create Policy``
-3. Click ``JSON``
+2. Click **Create Policy**
+3. Click **JSON**
 4. Copy and paste the following: ::
 
     {
@@ -62,7 +62,7 @@ Lambda Policy
 
 .. Note:: Replace ``AlexaPlusUnityTest`` with the name of your table.
 
-5. Click ``Review Policy``
-6. Give the Policy a name and click ``Create Policy``
+5. Click **Review Policy**
+6. Give the Policy a name and click **Create Policy**
 
 Attach this policy to thr Alexa Skill's Lambda IAM Role instead of the ``AmazonDynamoDBFullAccess`` policy.
