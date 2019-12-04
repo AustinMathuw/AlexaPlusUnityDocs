@@ -7,7 +7,6 @@ Now that we have configured our Unity workspace, it's time to set up the Alexa S
 Prerequisites
 =============
 
--  An `NPM <https://www.npmjs.com/>`_ project. For information on how to set up a NPM project, please see `this <https://docs.npmjs.com/getting-started/creating-node-modules>`_.
 -  A suitable Node.js development environment. The ASK SDK v2 for Node.js requires Node 4.3.2 or above.
 
 Integrating the Games SDK for Alexa into your Alexa Skill
