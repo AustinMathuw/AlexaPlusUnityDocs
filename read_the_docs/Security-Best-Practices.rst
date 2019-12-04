@@ -7,7 +7,7 @@ In our demo, we attach the ``AmazonDynamoDBFullAccess`` policy to both the Lambd
 Cognito Identity Pool Policy
 ============================
 
-1. Navigate to the `Policies section in IAM<https://console.aws.amazon.com/iam/home?#/policies>`_.
+1. Navigate to the `Policies section in IAM <https://console.aws.amazon.com/iam/home?#/policies>`_.
 2. Click ``Create Policy``
 3. Click ``JSON``
 4. Copy and paste the following: ::
@@ -23,10 +23,12 @@ Cognito Identity Pool Policy
                     "dynamodb:UpdateItem",
                     "dynamodb:PutItem"
                 ],
-                "Resource": "arn:aws:dynamodb:*:*:table/**AlexaPlusUnityTest**"
+                "Resource": "arn:aws:dynamodb:*:*:table/AlexaPlusUnityTest"
             }
         ]
     } 
+
+.. Note:: Replace ``AlexaPlusUnityTest`` with the name of your table.
 
 5. Click ``Review Policy``
 6. Give the Policy a name and click ``Create Policy``
@@ -36,7 +38,7 @@ Attach this policy to the UnAuth IAM Role instead of the ``AmazonDynamoDBFullAcc
 Lambda Policy
 =============
 
-1. Navigate to the `Policies section in IAM<https://console.aws.amazon.com/iam/home?#/policies>`_.
+1. Navigate to the `Policies section in IAM <https://console.aws.amazon.com/iam/home?#/policies>`_.
 2. Click ``Create Policy``
 3. Click ``JSON``
 4. Copy and paste the following: ::
@@ -53,10 +55,12 @@ Lambda Policy
                     "dynamodb:UpdateItem",
                     "dynamodb:PutItem"
                 ],
-                "Resource": "arn:aws:dynamodb:*:*:table/**AlexaPlusUnityTest**"
+                "Resource": "arn:aws:dynamodb:*:*:table/AlexaPlusUnityTest"
             }
         ]
     } 
+
+.. Note:: Replace ``AlexaPlusUnityTest`` with the name of your table.
 
 5. Click ``Review Policy``
 6. Give the Policy a name and click ``Create Policy``
