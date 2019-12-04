@@ -1,4 +1,11 @@
 .. toctree::
+   :caption: GENERAL
+   :hidden:
+   
+   FAQ
+   Security-Best-Practices
+   
+.. toctree::
    :caption: GETTING STARTED
    :hidden:
    
