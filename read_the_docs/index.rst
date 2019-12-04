@@ -2,8 +2,8 @@
    :caption: GENERAL
    :hidden:
    
-   FAQ
    Security-Best-Practices
+   FAQ
    
 .. toctree::
    :caption: GETTING STARTED
