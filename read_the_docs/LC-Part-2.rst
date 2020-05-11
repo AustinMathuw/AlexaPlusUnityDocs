@@ -12,7 +12,7 @@ Prerequisites
 -  Node.js (v4.5 or above).
 -  Have an `AWS Account <https://aws.amazon.com/>`_.
 -  Have an `Amazon Developer Account <https://developer.amazon.com/>`_.
--  Install the `ASK CLI v1 <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_.
+-  Install the `ASK CLI v1 <https://www.npmjs.com/package/ask-cli/v/1.7.23>`_.
 
 Creating the Skill
 ==================
@@ -182,7 +182,7 @@ Deploying the Skill
 6. Find and check the **AmazonDynamoDBFullAccess** policy.
 7. Click **Attach Policy**.
 
-.. Note:: This will only work if you set up the `ASK CLI <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_ correctly!
+.. Note:: This will only work if you set up the `ASK CLI v1 <https://www.npmjs.com/package/ask-cli/v/1.7.23>`_ correctly! Will not work with v2 of the ASK CLI.
 
 Wrapping Up
 ===========
