@@ -9,7 +9,7 @@ If you get this error, please try the following:
 
 -  Make sure the skill.json file is in the same folder where you are running the `ask deploy` command.
 -  Make sure you are using the `ASK CLI v1 <https://www.npmjs.com/package/ask-cli/v/1.7.23>`_.
-.. Note:: The npm command to install the ASK CLI v1: `npm i -g ask-cli@1.7.23`
+.. Note:: The npm command to install the ASK CLI v1: `npm i -g ask-cli@1`
 
 GetSessionAttributes: The service returned an error with HTTP Body: Cannot resolve destination host
 ===================================================================================================
