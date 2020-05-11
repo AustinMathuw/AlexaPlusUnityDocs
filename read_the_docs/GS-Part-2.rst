@@ -7,7 +7,7 @@ Now that we have configured our Unity workspace, it's time to set up the Alexa S
 Prerequisites
 =============
 
--  A suitable Node.js development environment. The ASK SDK v2 for Node.js requires Node 4.3.2 or above.
+-  A suitable Node.js development environment. The ASK SDK v1 for Node.js requires Node 4.3.2 or above.
 
 Integrating the Games SDK for Alexa into your Alexa Skill
 ==========================================================
