@@ -12,7 +12,7 @@ Prerequisites
 -  Node.js (v4.5 or above).
 -  Have an `AWS Account <https://aws.amazon.com/>`_.
 -  Have an `Amazon Developer Account <https://developer.amazon.com/>`_.
--  Install the `ASK CLI <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_.
+-  Install the `ASK CLI v2 <https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html>`_.
 
 Creating the Skill
 ==================
@@ -177,7 +177,7 @@ Deploying the Skill
 1. Open a command prompt or terminal and navigate to <Template Location>
 2. Type ``ask deploy`` to deploy the skill.
 3. In a browser, navigate to your newly created `Lambda Function <https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions/ask-custom-AlexaPlusUnityTest-default?tab=configuration>`_
-4. Scroll down to the **Execution Role** and click on ``View the ask-lambda-Unity-Light-Control-AlexaPlusUnityTest- role``. This takes you to the IAM role in IAM.
+4. Scroll down to the **Execution Role** and click on ``View the ask-lambda-Unity-Light-Control-AlexaPlusUnityTest role``. This takes you to the IAM role in IAM.
 5. Click **Attach Policies**.
 6. Find and check the **AmazonDynamoDBFullAccess** policy.
 7. Click **Attach Policy**.
