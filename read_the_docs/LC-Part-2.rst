@@ -13,6 +13,7 @@ Prerequisites
 -  Have an `AWS Account <https://aws.amazon.com/>`_.
 -  Have an `Amazon Developer Account <https://developer.amazon.com/>`_.
 -  Install the `ASK CLI v1 <https://www.npmjs.com/package/ask-cli/v/1.7.23>`_.
+.. Note:: The npm command to install the ASK CLI v1: `npm i -g ask-cli@1.7.23`
 
 Creating the Skill
 ==================
